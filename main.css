@@ -4,14 +4,11 @@
 
 body{
   margin: 0;
-}
-
-.hidden{
-  visibility: hidden;
-}
-
-.visible{
-  visibility: visible;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+  color: #fff;
 }
 
 #nav{
@@ -70,28 +67,57 @@ body{
   margin-left: 4vh;
 }
 
-li.active{
+#link-list li.active{
   color: yellow;
 }
 
-.tab{
-  height: 100vh;
-  width: 100vw;
-  background-color: #111;
-  color: white;
+#slider{
+  width: 400vw;
   position: relative;
+  transition: all .8s cubic-bezier(0.4, 0.4, 0.1, 1.1);
+}
+
+#slider.page1{
+  transform: translate(0,0);
+}
+
+#slider.page2{
+  transform: translate(-25%,0);
+}
+
+#slider.page3{
+  transform: translate(-50%,0);
+}
+
+#slider.page4{
+  transform: translate(-75%,0);
+}
+
+.slide{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  float: left;
+}
+
+.slide-content{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  color: #90ddff;
 }
 
 #intro{
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  width: 80vw;
-  text-align: center;
-  transform: translateX(-50%) translateY(-50%);
   font-size: 2.7vh;
   line-height: 5vh;
-  color: #90ddff;
+}
+
+#samim-1{
+  color: #fff;
+  font-size: 10vh;
+  line-height: 13vh;
 }
 
 #intro-phone{
@@ -103,21 +129,8 @@ li.active{
 }
 
 #skills{
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  width: 80vw;
-  text-align: center;
-  transform: translateX(-50%) translateY(-50%);
   font-size: 2.7vh;
   line-height: 5vh;
-  color: #90ddff;
-}
-
-#samim-1{
-  color: #fff;
-  font-size: 10vh;
-  line-height: 13vh;
 }
 
 .skill{
@@ -126,6 +139,7 @@ li.active{
 }
 
 #photoshop{
+  margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 20vh;
 }
@@ -140,6 +154,7 @@ li.active{
 }
 
 #css{
+  margin-left: 10vw;
   margin-right: 10vw;
 }
 

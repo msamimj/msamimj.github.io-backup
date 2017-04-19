@@ -4,6 +4,7 @@
   <title>Samim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Mono:700|Raleway:100" rel="stylesheet">
 </head>
 <body style="font-family: 'Open Sans', 'sans-serif';">
@@ -11,60 +12,59 @@
     <img id="menu-btn" onclick="switchNav()" src="menu.svg">
     <div id="cover"></div>
     <ul id="link-list">
-      <li id="toIntro" class="active" onclick="goTo('#intro','#toIntro')">INTRO</li>
-      <li id="toSkills" onclick="goTo('#skills','#toSkills')">SKILLS</li>
-      <li id="toWork" onclick="goTo('#work','#toWork')">WORK</li>
-      <li id="toBio" onclick="goTo('#bio','#toBio')">BIO</li>
+      <li id="toIntro" class="active" onclick="slideTo('#intro','#toIntro')">INTRO</li>
+      <li id="toSkills" onclick="slideTo('#skills','#toSkills')">SKILLS</li>
+      <li id="toWork" onclick="slideTo('#work','#toWork')">WORK</li>
+      <li id="toBio" onclick="slideTo('#bio','#toBio')">BIO</li>
     </ul>
   </div>
-  <div id="tab1" class="tab">
-    <div id="intro" class="visible">
-      Let me introduce you to<br>
-      <span id="samim-1">
-        <span style="font-family: 'Roboto Mono','monospace';">SAMIM</span>
-        <span style="font-family: 'Raleway','sans-serif'; margin-left:-.2em;">JAHIN</span>
-      </span><br>
-      <span id="intro-desk">
-        He is a self-taught <span style="color:#fff">graphic designer</span> and <span style="color:#fff">front-end developer</span>.<br>
-        Currently a CSE Undergrad, he loves to write code<br>
-        and to create beautiful designs.
-      </span>
-      <span id="intro-phone">
-        He is a self-taught <span style="color:#fff">graphic designer </span>and <span style="color:#fff">front-end developer</span>. Currently a CSE Undergrad, he loves to write code and to create beautiful designs.
-      </span>
-    </div> <!-- end of content-1 -->
-    <div id="skills" class="hidden">
-      <div id="photoshop" class="skill">
-        <div class="skill-title">Adobe Photoshop</div>
-        <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
-      </div>
-      <!-- <div style="float:left; width:10vw; height:5vh;"></div> -->
-      <div id="illustrator" class="skill">
-        <div class="skill-title">Adobe Illustrator</div>
-        <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
-      </div>
-      <!-- <div style="float:left; width:10vw; height:5vh;"></div> -->
-      <div id="html" class="skill">
-        <div class="skill-title">HTML</div>
-        <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg">
-      </div>
-      <!-- <div style="width:80vh; height:20vh;"></div> -->
-      <div id="css" class="skill">
-        <div class="skill-title">CSS</div>
-        <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg">
-      </div>
-      <!-- <div style="float:left; width:10vw; height:5vh;"></div> -->
-      <div id="js" class="skill">
-        <div class="skill-title">JavaScript</div>
-        <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
-      </div>
-      <!-- <div style="float:left; width:10vw; height:5vh;"></div> -->
-      <div id="cpp" class="skill">
-        <div class="skill-title">C++</div>
-        <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
-      </div>
-    </div>
-  </div> <!-- end of tab-1 -->
+  <div id="slider">
+    <div class="slide" id="intro">
+      <div class="slide-content"> <!-- start of intro -->
+        Let me introduce you to<br>
+        <span id="samim-1">
+          <span style="font-family: 'Roboto Mono','monospace';">SAMIM</span>
+          <span style="font-family: 'Raleway','sans-serif'; margin-left:-.2em;">JAHIN</span>
+        </span><br>
+        <span id="intro-desk">
+          He is a self-taught <span style="color:#fff">graphic designer</span> and <span style="color:#fff">front-end developer</span>.<br>
+          Currently a CSE Undergrad, he loves to write code<br>
+          and to create beautiful designs.
+        </span>
+        <span id="intro-phone">
+          He is a self-taught <span style="color:#fff">graphic designer </span>and <span style="color:#fff">front-end developer</span>. Currently a CSE Undergrad, he loves to write code and to create beautiful designs.
+        </span>
+      </div> <!-- end of intro -->
+    </div> <!-- end of slide1 -->
+    <div id="skills" class="slide">
+      <div class="slide-content"> <!-- start of skills -->
+        <div id="photoshop" class="skill">
+          <div class="skill-title">Adobe Photoshop</div>
+          <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
+        </div>
+        <div id="illustrator" class="skill">
+          <div class="skill-title">Adobe Illustrator</div>
+          <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
+        </div>
+        <div id="html" class="skill">
+          <div class="skill-title">HTML</div>
+          <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg">
+        </div>
+        <div id="css" class="skill">
+          <div class="skill-title">CSS</div>
+          <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg">
+        </div>
+        <div id="js" class="skill">
+          <div class="skill-title">JavaScript</div>
+          <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
+        </div>
+        <div id="cpp" class="skill">
+          <div class="skill-title">C++</div>
+          <img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star.svg"><img class="str" src="star0.svg"><img class="str" src="star0.svg">
+        </div>
+      </div><!-- end of skills -->
+    </div> <!-- end of slide-1 -->
+  </div> <!-- end page -->
 </body>
 
 <script type="text/javascript" src="jq.js"></script>

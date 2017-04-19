@@ -9,62 +9,30 @@ function switchNav(){
   $("#link-list").toggleClass("active");
 }
 
-function goTo(id,that){
+function slideTo(id,that){
   $("#toIntro").removeClass("active");
   $("#toSkills").removeClass("active");
   $("#toWork").removeClass("active");
   $("#toBio").removeClass("active");
   $(that).addClass("active");
+
+  $("#slider").removeClass("page1");
+  $("#slider").removeClass("page2");
+  $("#slider").removeClass("page3");
+  $("#slider").removeClass("page4");
+
   switch (id) {
     case "#intro":
-      $("#intro").addClass("visible");
-      $("#skills").addClass("hidden");
-      $("#work").addClass("hidden");
-      $("#bio").addClass("hidden");
-
-      $("#intro").removeClass("hidden");
-      $("#skills").removeClass("visible");
-      $("#work").removeClass("visible");
-      $("#bio").removeClass("visible");
-
+      $("#slider").addClass("page1");
       break;
     case "#skills":
-      $("#intro").addClass("hidden");
-      $("#skills").addClass("visible");
-      $("#work").addClass("hidden");
-      $("#bio").addClass("hidden");
-
-      $("#intro").removeClass("visible");
-      $("#skills").removeClass("hidden");
-      $("#work").removeClass("visible");
-      $("#bio").removeClass("visible");
-
+      $("#slider").addClass("page2");
       break;
     case "#work":
-      $("#intro").addClass("hidden");
-      $("#skills").addClass("hidden");
-      $("#work").addClass("visible");
-      $("#bio").addClass("hidden");
-
-      $("#intro").removeClass("visible");
-      $("#skills").removeClass("visible");
-      $("#work").removeClass("hidden");
-      $("#bio").removeClass("visible");
-
+      $("#slider").addClass("page3");
       break;
     case "#bio":
-      $("#intro").addClass("hidden");
-      $("#skills").addClass("hidden");
-      $("#work").addClass("hidden");
-      $("#bio").addClass("visible");
-
-      $("#intro").removeClass("visible");
-      $("#skills").removeClass("visible");
-      $("#work").removeClass("visible");
-      $("#bio").removeClass("hidden");
-
+      $("#slider").addClass("page4");
       break;
-    default:
-
   }
 }
