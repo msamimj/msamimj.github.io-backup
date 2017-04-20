@@ -227,8 +227,6 @@ html{
     height: 10vw;
   }
 
-
-
   #cover{
     width: 16.5vw;
     height: 16.5vw;
@@ -241,6 +239,11 @@ html{
     transform: translateY(-50%) translateX(-100%);
     transition: all 0.4s ease;
     z-index: 98;
+  }
+
+  #indicator{
+    top: 11vw;
+    left: 16.5vw;
   }
 
   #link-list.active{
@@ -348,6 +351,11 @@ html{
   }
 
   #link-list{
+    top: 10vw;
+    left: 14vw;
+  }
+
+  #indicator{
     top: 10vw;
     left: 14vw;
   }
