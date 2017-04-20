@@ -63,6 +63,7 @@ html{
 
 #link-list.active{
   transform: translateY(-50%) translateX(0);
+  transition-delay: 0.5s;
 }
 
 #link-list li{
@@ -76,7 +77,6 @@ html{
 }
 
 #indicator{
-  font-size: 2.7vh;
   font-family: 'Roboto Mono','monospace';
   color: #ffff00;
   position: fixed;
@@ -85,13 +85,12 @@ html{
   display: inline-block;
   padding-left: 4vh;
   transform: translate(-100%,-50%);
-  transition: none;
+  transition: all 0.4s ease;
   transition-delay: 0s;
 }
 
 #indicator.active{
   transform: translate(0,-50%);
-  transition: all 0.4s ease;
   transition-delay: 0.5s;
 }
 
@@ -197,21 +196,21 @@ html{
 }
 
 .chevron{
-  width: 3vw;
-  height: 3vw;
+  width: 5vh;
+  height: 5vh;
   cursor: pointer;
 }
 
 #next{
   position: fixed;
-  right: 3vw;
-  bottom: 3vw;
+  right: 5.5vh;
+  bottom: 5.5vh;
 }
 
 #prev{
   position: fixed;
-  right: 7vw;
-  bottom: 3vw;
+  right: 12vh;
+  bottom: 5.5vh;
 }
 
 @media screen and (orientation: portrait) {
@@ -287,18 +286,18 @@ html{
   }
 
   .chevron{
-    width: 7vw;
-    height: 7vw;
+    width: 9vw;
+    height: 9vw;
   }
 
   #next{
-    right: 3vw;
-    bottom: 3vw;
+    right: 6.5vw;
+    bottom: 6.5vw;
   }
 
   #prev{
-    right: 12vw;
-    bottom: 3vw;
+    right: 17vw;
+    bottom: 6.5vw;
   }
 
   .str{
@@ -332,7 +331,7 @@ html{
   }
 }
 
-@media screen and (orientation:portrait) and (min-width:768px){
+@media screen and (orientation:portrait) and (max-width:768px){
   #menu-btn{
     top: 10vw;
     left: 10vw;
@@ -343,6 +342,21 @@ html{
   #menu-btn:hover{
     width: 8vw;
     height: 8vw;
+  }
+
+  .chevron{
+    width: 7vw;
+    height: 7vw;
+  }
+
+  #next{
+    right: 6.5vw;
+    bottom: 6.5vw;
+  }
+
+  #prev{
+    right: 15vw;
+    bottom: 6.5vw;
   }
 
   #cover{
