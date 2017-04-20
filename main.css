@@ -11,6 +11,10 @@ body{
   color: #fff;
 }
 
+html{
+  overflow: hidden;
+}
+
 #nav{
   color: #fff;
 }
@@ -104,6 +108,7 @@ body{
   position: absolute;
   top: 50%;
   width: 100%;
+  padding: 10vw;
   text-align: center;
   transform: translateY(-50%);
   color: #90ddff;
@@ -139,7 +144,6 @@ body{
 }
 
 #photoshop{
-  margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 20vh;
 }
@@ -154,7 +158,6 @@ body{
 }
 
 #css{
-  margin-left: 10vw;
   margin-right: 10vw;
 }
 

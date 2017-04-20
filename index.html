@@ -12,10 +12,10 @@
     <img id="menu-btn" onclick="switchNav()" src="menu.svg">
     <div id="cover"></div>
     <ul id="link-list">
-      <li id="toIntro" class="active" onclick="slideTo('#intro','#toIntro')">INTRO</li>
-      <li id="toSkills" onclick="slideTo('#skills','#toSkills')">SKILLS</li>
-      <li id="toWork" onclick="slideTo('#work','#toWork')">WORK</li>
-      <li id="toBio" onclick="slideTo('#bio','#toBio')">BIO</li>
+      <li id="toIntro" class="active" onclick="slideTo('#intro')">INTRO</li>
+      <li id="toSkills" onclick="slideTo('#skills')">SKILLS</li>
+      <li id="toWork" onclick="slideTo('#work')">WORK</li>
+      <li id="toBio" onclick="slideTo('#bio')">BIO</li>
     </ul>
   </div>
   <div id="slider">
@@ -64,7 +64,21 @@
         </div>
       </div><!-- end of skills -->
     </div> <!-- end of slide-1 -->
+    <div id="work" class="slide">
+      <div class="slide-content">
+        Lazy guy hasn't worked much.
+      </div>
+    </div> <!-- end of work -->
+    <div id="bio" class="slide">
+      <div class="slide-content">
+        He wants to keep that a secret.
+      </div>
+    </div> <!-- end of work -->
   </div> <!-- end page -->
+  <div id="pager" style="position:fixed; bottom:5vh; right:5vh;">
+    <div id="prev" onclick="toPrev()" style="width:30px; height:30px; background-color:red; padding:5px; float:right;">Prev</div>
+    <div id="next" onclick="toNext()" style="width:30px; height:30px; background-color:yellow; padding:5px; float:right;">Next</div>
+  </div>
 </body>
 
 <script type="text/javascript" src="jq.js"></script>
