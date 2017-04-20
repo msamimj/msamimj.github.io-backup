@@ -4,14 +4,38 @@ $(window).on("load", function(){
 
 var cur = 1;
 
+function updateI(){
+  var i = $("#indicator");
+  switch (cur) {
+    case 1:
+      i.html("INTRO");
+      break;
+    case 2:
+      i.html("SKILLS");
+      break;
+    case 3:
+      i.html("WORK");
+      break;
+    case 4:
+      i.html("BIO");
+      break;
+  }
+}
+
 function switchNav(){
-  $("#nav").toggleClass("active");
-  $("#link-list").toggleClass("active");
+  var n = $("#nav");
+  var l = $("#link-list");
+  var i = $("#indicator");
+  n.toggleClass("active");
+  l.toggleClass("active");
+  updateI();
+  i.toggleClass("active");
 }
 
 function slideTo(id){
   $("#nav").addClass("active");
   $("#link-list").addClass("active");
+  $("#indicator").removeClass("active");
   switch (cur){
     case 1:
       $("#toIntro").removeClass("active");
@@ -53,6 +77,7 @@ function slideTo(id){
       cur = 4;
       break;
   }
+  updateI();
 }
 
 function toPrev(){
@@ -70,6 +95,7 @@ function toPrev(){
       slideTo("#work","#toWork");
       break;
   }
+  updateI();
 }
 
 function toNext(){
@@ -87,4 +113,5 @@ function toNext(){
       slideTo("#work","#toWork");
       break;
   }
+  updateI();
 }
