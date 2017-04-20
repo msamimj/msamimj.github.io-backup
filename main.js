@@ -1,8 +1,4 @@
-$(window).on("load", function(){
-  window.scrollTo(0,1);
-})
-
-var cur = 1;
+var cur = 1, uc = 0;
 
 function updateI(){
   var i = $("#indicator");
@@ -23,19 +19,26 @@ function updateI(){
 }
 
 function switchNav(){
-  var n = $("#nav");
-  var l = $("#link-list");
-  var i = $("#indicator");
-  n.toggleClass("active");
-  l.toggleClass("active");
-  updateI();
-  i.toggleClass("active");
+  if(uc==0){
+    uc++;
+  }
+  $("#nav").toggleClass("active");
+  $("#link-list").toggleClass("active");
+  $("#indicator").toggleClass("active");
+}
+
+function openNav(){
+  if(uc==0){
+    $("#nav").addClass("active");
+    $("#link-list").addClass("active");
+    $("#indicator").removeClass("active");
+  }
 }
 
 function slideTo(id){
-  $("#nav").addClass("active");
-  $("#link-list").addClass("active");
-  $("#indicator").removeClass("active");
+
+  openNav();
+
   switch (cur){
     case 1:
       $("#toIntro").removeClass("active");
