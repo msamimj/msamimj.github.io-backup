@@ -176,6 +176,24 @@ html{
   padding: 3px;
 }
 
+.chevron{
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+#next{
+  position: fixed;
+  right: 3vw;
+  bottom: 3vw;
+}
+
+#prev{
+  position: fixed;
+  right: 7vw;
+  bottom: 3vw;
+}
+
 @media screen and (orientation: portrait) {
   #menu-btn{
     top: 11vw;
@@ -219,6 +237,11 @@ html{
     line-height: 13vw;
   }
 
+  .slide-content{
+    font-size: 3vw;
+    line-height: 5vw;
+  }
+
   #intro{
     font-size: 3vw;
     line-height: 5vw;
@@ -235,6 +258,21 @@ html{
   .skill{
     width: 35vw;
     float: left;
+  }
+
+  .chevron{
+    width: 7vw;
+    height: 7vw;
+  }
+
+  #next{
+    right: 3vw;
+    bottom: 3vw;
+  }
+
+  #prev{
+    right: 12vw;
+    bottom: 3vw;
   }
 
   .str{
@@ -308,6 +346,10 @@ html{
 }
 
 @media screen and (orientation:portrait) and (max-width:479px){
+  .slide-content{
+    font-size: 4.2vw;
+    line-height: 7.6vw;
+  }
   #intro{
     font-size: 4.2vw;
     line-height: 7.6vw;

@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <title>Samim</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale='1.0', max-scale='1.0'">
   <link rel="stylesheet" href="main.css">
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Mono:700|Raleway:100" rel="stylesheet">
@@ -75,9 +75,9 @@
       </div>
     </div> <!-- end of work -->
   </div> <!-- end page -->
-  <div id="pager" style="position:fixed; bottom:5vh; right:5vh;">
-    <div id="prev" onclick="toPrev()" style="width:30px; height:30px; background-color:red; padding:5px; float:right;">Prev</div>
-    <div id="next" onclick="toNext()" style="width:30px; height:30px; background-color:yellow; padding:5px; float:right;">Next</div>
+  <div id="pager">
+    <img src="prev.svg" class="chevron" alt="Prev" onclick="toPrev()" id="prev">
+    <img src="next.svg" class="chevron" alt="Next" onclick="toNext()" id="next">
   </div>
 </body>
 
