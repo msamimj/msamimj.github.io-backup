@@ -14,20 +14,32 @@
             body{
                 margin: 0;
                 overflow: hidden;
+                font-family: sans-serif;
+            }
+            #side{
+                width: 250px;
+                position: fixed;
+                right: 25px;
+                top: 50px;
+                font-size: 1.5em;
             }
         </style>
         
     </head>
         
-    <body></body>
+    <body>
+        <div id="side"><b>WELCOME</b><br>Click on buildings for more info.</div>
+    </body>
     
     <script type="text/javascript">
         
-        var scene, camera, renderer, orbitControls, clock;
+        var scene, camera, renderer, orbitControls, clock, projector;
+        var side = document.getElementById("side");
         
-        var width = window.innerWidth;
+        var width = window.innerWidth-300;
         var height = window.innerHeight
         var aspectRatio = width/height;
+        
         
         function init(){
             
@@ -44,12 +56,12 @@
             renderer = new THREE.WebGLRenderer({antialias:true});
             renderer.setSize(width, height);
             renderer.setClearColor(0xdddddd);
-            renderer.shadowMapEnabled = true;
+//            renderer.shadowMapEnabled = true;
 
             //Terrain
             var terrainMaterial = new THREE.MeshLambertMaterial({color:0xa67c52});
             terrainMaterial.side = THREE.DoubleSide;
-            var terrainGeometry = new THREE.PlaneGeometry(45, 45, 29, 19);
+            var terrainGeometry = new THREE.PlaneGeometry(60, 60, 1, 1);
 //            for(var i=0; i<terrainGeometry.vertices.length; i++){
 //                terrainGeometry.vertices[i].z = zCoords[i]/40;
 //            }
@@ -59,27 +71,32 @@
             terrain.position.y = 2.75;
             terrain.receiveShadow = true;
             terrain.castShadow = true;
+            terrain.name = "ground";
             scene.add(terrain);
+//            terrain.visible = false;
             
-            var terrainBGeometry = new THREE.PlaneGeometry(45,30,1,1);
+            var terrainBGeometry = new THREE.PlaneGeometry(60,40,1,1);
             var terrainB = new THREE.Mesh(terrainBGeometry, terrainMaterial);
             terrainB.rotation.x = -Math.PI * 0.5;
 //            scene.add(terrainB);
             
             var roadMaterial = new THREE.MeshLambertMaterial({color:0xababab});
             
-            var road1Geometry = new THREE.BoxGeometry(45, .2, 4.5);
+            var road1Geometry = new THREE.BoxGeometry(45, .05, 4.5);
             var road1 = new THREE.Mesh(road1Geometry, roadMaterial);
-            road1.position.y = 2.75;
+            road1.position.y = 2.8;
             road1.position.z = 6;
             scene.add(road1);
+            road1.name = "road1";
+//            road1.visible = false;
             
-            var road2Geometry = new THREE.BoxGeometry(4.5, .2, 28.5);
+            var road2Geometry = new THREE.BoxGeometry(4.5, .05, 28.5);
             var road2 = new THREE.Mesh(road2Geometry, roadMaterial);
             road2.position.x = -12;
-            road2.position.y = 2.75;
+            road2.position.y = 2.8;
             road2.position.z = -8.25;
             scene.add(road2);
+            road2.name = "road2";
 
             //OBJ Loader
             var loader = new THREE.OBJLoader();
@@ -87,7 +104,7 @@
             //Library
             loader.load('assets/minimalLibrary.obj', function(loadedMesh){
 
-                var material = new THREE.MeshLambertMaterial({color: 0xeeeeee});
+                var material = new THREE.MeshLambertMaterial({color: 0xfefefe});
                 material.side = THREE.DoubleSide;
 
                 loadedMesh.children.forEach(function(child){
@@ -98,17 +115,26 @@
                     child.receiveShadow = true;
                 });
                 
-                loadedMesh.scale.set(1.8, 1.8, 1.8);
-                loadedMesh.position.set(15, 2.7, -6)
+                loadedMesh.scale.set(2, 1.8, 1.8);
+                loadedMesh.position.set(16, 2.8, -6)
                 loadedMesh.rotation.y = Math.PI;
                 scene.add(loadedMesh);
 
             });
             
+            var libBaseGeom = new THREE.BoxGeometry(7,5,7);
+            var libBaseMat = new THREE.MeshLambertMaterial({color: 0xfefefe});
+            var libBase = new THREE.Mesh(libBaseGeom, libBaseMat);
+            libBase.rotation.x = -Math.PI * 0.5;
+            libBase.position.set(13.5,2.8,-5);
+            scene.add(libBase);
+            libBase.name = "Bharat Ratna APJ Abdul Kalam Learning Resource Centre";
+            libBase.material.visible = false;
+            
             //EBuilding
             loader.load('assets/minimalEBuilding.obj', function(loadedE){
                 
-                var material = new THREE.MeshLambertMaterial({color: 0xdddddd});
+                var material = new THREE.MeshLambertMaterial({color: 0xffefdc});
                 material.side = THREE.DoubleSide;
                 
                 loadedE.children.forEach(function(child){
@@ -126,10 +152,16 @@
                 
             });
             
+            var loadedEBaseGeom = new THREE.BoxGeometry(10,4,5.5);
+            var loadedEBase =  new THREE.Mesh(loadedEBaseGeom, libBaseMat);
+            loadedEBase.position.set(1.7,2.8,-1);
+            loadedEBase.name = "SBI, Indovation Lab, Startup Centre";
+            scene.add(loadedEBase);
+            
             //8Building
             loader.load('assets/minimal8Building.obj', function(loaded8){
                
-                var material = new THREE.MeshLambertMaterial({color: 0xdddddd});
+                var material = new THREE.MeshLambertMaterial({color: 0xffefdc});
                 material.side = THREE.DoubleSide;
                 
                 loaded8.children.forEach(function(child){
@@ -153,8 +185,40 @@
                 
             });
             
+            var loaded81BaseGeom = new THREE.BoxGeometry(10,5,5.5);
+            var loaded81Base = new THREE.Mesh(loaded81BaseGeom, libBaseMat);
+            loaded81Base.position.set(-1,3.2,-8.5);
+            loaded81Base.name = "ECE Department, CSE Department, Central Computing Centre"
+            scene.add(loaded81Base);
+            
+            var loaded82Base = loaded81Base.clone();
+            loaded82Base.position.set(7,3.2,-15.3);
+            loaded82Base.name = "Department Building (Under Construction)";
+            scene.add(loaded82Base);
+            
+            //New Gallery
+//            loader.load('assets/minimalNewGallery.obj', function(loadedMesh){
+//                
+//                var material = new THREE.MeshLambertMaterial({color: 0xffffff});
+//                material.side = THREE.DoubleSide;
+//                
+//                loadedMesh.children.forEach(function(child){
+//                    child.material = material;
+//                    child.geometry.computeFaceNormals();
+//                    child.geometry.computeVertexNormals();
+//                    child.castShadow = true;
+//                    child.receiveShadow = true;
+//                });
+//                
+//                loadedMesh.scale.set(1.5, 1.5, 1.5);
+//                loadedMesh.position.z = 10;
+//                loadedMesh.position.y = 2.8;
+//                scene.add(loadedMesh);
+//                
+//            });
+            
             //Directional Light
-            var directionalLight = new THREE.DirectionalLight('#eeeeee');
+            var directionalLight = new THREE.DirectionalLight('#ffffff');
             directionalLight.position.set(-15, 25, 15);
             directionalLight.castShadow = true;
             directionalLight.shadowCameraNear = 2;
@@ -178,6 +242,31 @@
 
             //Add Renderer to DOM
             document.body.appendChild(renderer.domElement);
+            
+            //Projector 
+            
+            projector = new THREE.Projector();
+            
+            renderer.domElement.addEventListener('mousedown', function(event){
+                var vector = new THREE.Vector3(
+                    renderer.devicePixelRatio * (event.pageX - this.offsetLeft) / this.width * 2 - 1, 
+                    -renderer.devicePixelRatio * (event.pageY - this.offsetTop) / this.height * 2 + 1, 
+                    0
+                );
+                projector.unprojectVector(vector, camera);
+                
+                var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+                
+                var intersects = raycaster.intersectObjects(scene.children);
+                if(intersects.length>0){
+                    if(intersects[0].object.name){
+                        var name = intersects[0].object.name;
+                        side.innerHTML = name;
+                    }
+                }
+                
+                
+            }, false);
             
             //render
             render();
