@@ -26,7 +26,7 @@ var c0 = document.getElementById("c0"),
     c23 = document.getElementById("c23"),
     c24 = document.getElementById("c24");
 
-var tl = new TimelineMax({delay:0.2});
+var tl = new TimelineMax({delay:1});
 tl
 // .to([c1, c6, c22, c17], .2, {backgroundColor:"#ec33ff"})
 // .to([c2, c5, c8, c7], .2, {backgroundColor:"#6503ff"})
@@ -35,6 +35,10 @@ tl
 // .to([c14, c16, c15, c4], .2, {backgroundColor:"#ecff35"})
 // .to([c18, c11, c21, c20], .2, {backgroundColor:"#ff9e35"})
 // .to([c0, c3, c23, c9], .2, {backgroundColor:"#ff3834"})
+.to(c4, .2, {scaleY:.1, transformOrigin:"center bottom"})
+.to([c18, c19, c22, c23], 2, {rotation:360, ease:Linear.easeNone})
+.to(c4, .2, {scaleY:1})
+.to(c4, 1, {transformOrigin:"center center"})
 .to(c1, .2, {top:150, left:10})
 .to(c1, .2, {width:20, height:100})
 .to(c2, .2, {top:170, left:120})
