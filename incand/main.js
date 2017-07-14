@@ -119,7 +119,8 @@ tl
 //.to(wel, 0, {opacity: 100})
 
 .to (inc,           .75,    {scale: 2.5, top: (vheight/2)-0.5*(400*ratio*(195/935)), opacity: 100},     "-=.2")
-.to (com,           .5,     {opacity:100, scale: 2})
+.to (com,           .5,     {opacity:100, scale: 2.3})
+.to (com,           .4,     {scale: 1.8, repeat: 3, yoyo: true}, "+=0.6")
 
 //.to(wel, 2, {left: (vwidth/2)-136}, "+=0.5")
 //.to(container, 2, {left: (vwidth/2)-268}, "-=2.1")
