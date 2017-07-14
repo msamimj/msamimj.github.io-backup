@@ -1,5 +1,9 @@
 //var tween = TweenMax.to("#c4",.1,{scaleY:.2, transformOrigin: "0% 100%", ease: Linear.easeNone});
 
+$(document).on('touchstart', function(e){
+    e.preventDefault();
+})
+
 var vwidth = window.innerWidth,
     vheight = window.innerHeight,
     cwidth = 0, //width of container containing the player components
