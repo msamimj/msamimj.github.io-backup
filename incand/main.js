@@ -1,8 +1,6 @@
 //var tween = TweenMax.to("#c4",.1,{scaleY:.2, transformOrigin: "0% 100%", ease: Linear.easeNone});
 
-$(document).on('touchstart', function(e){
-    e.preventDefault();
-})
+$('html, body').scrollTop(1);
 
 var vwidth = window.innerWidth,
     vheight = window.innerHeight,
