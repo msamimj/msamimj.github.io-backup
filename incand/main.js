@@ -1,7 +1,3 @@
-//var tween = TweenMax.to("#c4",.1,{scaleY:.2, transformOrigin: "0% 100%", ease: Linear.easeNone});
-
-$('html, body').scrollTop(1);
-
 var vwidth = window.innerWidth,
     vheight = window.innerHeight,
     cwidth = 0, //width of container containing the player components
@@ -22,8 +18,6 @@ else
 
 var ratio = cwidth/600,
     ratio2 = cwidth/2000;
-
-console.log(ratio);
 
 var container = document.getElementById("container");
 
