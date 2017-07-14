@@ -7,12 +7,17 @@ body{
     margin: 0;
     height: 200%;
     width: 100%;
+    position: relative;
 }
 
 #page1{
     height: 50%;
     background: url(bg.svg) no-repeat center fixed; 
     background-size: cover;
+}
+
+#page2{
+    
 }
 
 #container{
