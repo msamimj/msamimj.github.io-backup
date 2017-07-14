@@ -12,8 +12,11 @@ body{
 
 #page1{
     height: 50%;
-    background: url(bg.svg) no-repeat center fixed; 
+    background-image: url("bg.svg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
 }
 
 #page2{
