@@ -1,0 +1,159 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #2a311a;
+	overflow: hidden;
+}
+
+#container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#mount{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(media/bg2.PNG);
+	background-size: cover;
+}
+
+#logo{
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	left: 35%;
+	margin-top: 40px;
+	background-image: url('media/tec.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#tag{
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	left: 50%;
+	transform: translate(-50%, -7%);
+	background-image: url('media/tag.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#vr{
+	position: fixed;
+	display: inline-block;
+	width: 15%;
+	height: 30%;
+	left: 10%;
+	top: 60%;
+	transform: translateY(-50%);
+	background-image: url('media/vr.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+#info{
+	position: fixed;
+	display: inline-block;
+	width: 15%;
+	height: 30%;
+	right: 10%;
+	top: 60%;
+	transform: translateY(-50%);
+	background-image: url('media/info.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+#tour{
+	position: fixed;
+	width: 25%;
+	top: 75%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	cursor: pointer;
+}
+
+@media (max-width: 600px){
+
+	#logo{
+		position: fixed;
+		width: 60%;
+		height: 30%;
+		left: 20%;
+		margin-top: 40px;
+		background-image: url('media/tec.png');
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	#tag{
+		position: fixed;
+		width: 80%;
+		height: 100%;
+		left: 10%;
+		transform: translateY(-7%);
+		background-image: url('media/tag.png');
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	#vr{
+		position: fixed;
+		display: inline-block;
+		width: 25%;
+		height: 30%;
+		left: 20%;
+		top: 40%;
+		transform: translateY(-50%);
+		background-image: url('media/vr.gif');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		cursor: pointer;
+	}
+
+	#info{
+		position: fixed;
+		display: inline-block;
+		width: 25%;
+		height: 30%;
+		right: 20%;
+		top: 40%;
+		transform: translateY(-50%);
+		background-image: url('media/info.gif');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		cursor: pointer;
+	}
+
+	#tour{
+		width: 50%;
+		top: 70%;
+	}
+
+}
+
+#particles-js{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0
+}

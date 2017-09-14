@@ -1,0 +1,80 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(media/bg2.PNG);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#logo{
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  left: 35%;
+  margin-top: 140px;
+  background-image: url('media/tec.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#tag{
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  background-image: url('media/tag.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+@media (max-width: 600px){
+
+  #logo{
+    position: fixed;
+    width: 60%;
+    height: 30%;
+    left: 20%;
+    margin-top: 200px;
+    background-image: url('media/tec.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #tag{
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    left: 15%;
+    transform: translateY(-40%);
+    background-image: url('media/tag.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+#particles-js{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0
+}
