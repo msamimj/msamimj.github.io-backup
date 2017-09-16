@@ -1,0 +1,113 @@
+<canvas id="board" width="400" height="400"></canvas>
+<div id="score"></div>
+
+<script type="text/javascript">
+	speed=10;
+	score=0;
+	window.onload = () => {
+		can = document.getElementById("board");
+		ctx = can.getContext("2d");
+		scoreCard = document.getElementById("score");
+		document.addEventListener("keydown", keyPress);
+		setInterval(game, 1000/speed);
+	}
+	px=py=10;
+	gs=tc=20;
+	ax=ay=15;
+	xv=yv=0;
+	trail=[];
+	tail=2;
+	function game(){
+		scoreCard.innerHTML = score;
+		px += xv;
+		py += yv;
+		if(px<0){
+			px=tc-1;
+		}
+		if(px>tc-1){
+			px=0;
+		}
+		if(py<0){
+			py=tc-1;
+		}
+		if(py>tc-1){
+			py=0;
+		}
+		ctx.fillStyle = "black";
+		ctx.fillRect(0,0,can.width,can.height);
+
+		ctx.fillStyle = "white";
+		for(var i=0; i<trail.length; i++){
+			ctx.fillRect(trail[i].x*gs+1, trail[i].y*gs+1, gs-1, gs-1);
+			if(trail[i].x==px && trail[i].y==py){
+				tail = 2;
+				score = 0;
+			}
+		}		
+
+		trail.push({x:px, y:py});
+		while(trail.length>tail){
+			trail.shift();
+		}
+
+		if(ax==px && ay==py){
+			tail++;
+			score++;
+			ax=Math.floor(Math.random()*tc);
+			ay=Math.floor(Math.random()*tc);
+		}
+
+		ctx.fillStyle = "lime";
+		ctx.fillRect(ax*gs+1, ay*gs+1, gs-1, gs-1);
+	}
+	function keyPress(e){
+		switch(e.keyCode){
+			case 37:
+				if(xv!=1){
+					xv=-1; yv=0;
+				}				
+				break;
+			case 38:
+				if(yv!=1){
+					xv=0; yv=-1;	
+				}				
+				break;
+			case 39:
+				if(xv!=-1){
+					xv=1; yv=0;
+				}
+				break;
+			case 40:
+				if(yv!=-1){
+					xv=0; yv=1;
+				}
+				break;
+		}
+	}
+</script>
+
+<style type="text/css">
+	body, html{
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	#board{
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#score{
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		font-size: 2em;
+		font-weight: bolder;
+		font-family: monospace;
+		padding: 20px 30px;
+		color: white;
+		background-color: green;
+	}
+</style>
