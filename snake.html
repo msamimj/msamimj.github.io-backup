@@ -11,6 +11,7 @@
 </html>
 <canvas id="board" width="400" height="400"></canvas>
 <div id="score"></div>
+<div id="high"></div>
 <div id="btns">
 	<div id="up" class="btn" onclick="moveup()">^</div>
 	<div id="left" class="btn" onclick="moveleft()"><</div>
@@ -18,16 +19,25 @@
 	<div id="right" class="btn" onclick="moveright()">></div>
 </div>
 <script type="text/javascript">
+	
+	var high = 0;
+	if(localStorage.getItem('high')){
+		high = parseInt(localStorage.high, 10);
+	}else{
+		localStorage.high = 0;
+	}
+
 	ratio = 1;
 	if(window.innerWidth<window.innerHeight){
 		ratio = window.innerWidth/300;
-	}	
+	}
 	speed=10;
 	score=0;
 	window.onload = () => {
 		can = document.getElementById("board");
 		ctx = can.getContext("2d");
 		scoreCard = document.getElementById("score");
+		highCard = document.getElementById("high");
 		document.addEventListener("keydown", keyPress);
 		setInterval(game, 1000/speed);
 	}
@@ -38,7 +48,8 @@
 	trail=[];
 	tail=2;
 	function game(){
-		scoreCard.innerHTML = score;
+		scoreCard.innerHTML = "Score: " + score;
+		highCard.innerHTML = "High Score: " + high;
 		px += xv;
 		py += yv;
 		if(px<0){
@@ -73,6 +84,10 @@
 		if(ax==px && ay==py){
 			tail++;
 			score++;
+			if(score>high){
+				high = score;
+				localStorage.high = score;
+			}
 			ax=Math.floor(Math.random()*tc);
 			ay=Math.floor(Math.random()*tc);
 		}
@@ -168,6 +183,17 @@
 		position: fixed;
 		top: 10px;
 		right: 10px;
+		font-size: 2em;
+		font-weight: bolder;
+		font-family: monospace;
+		padding: 20px 30px;
+		color: white;
+		background-color: green;
+	}
+	#high{
+		position: fixed;
+		top: 10px;
+		left: 10px;
 		font-size: 2em;
 		font-weight: bolder;
 		font-family: monospace;
