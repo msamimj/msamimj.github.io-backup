@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Creating Percent Loader
+	</title>
+</head>
+<body>
+	<div id="prog"></div>
+	<div id="cont" style="display: none; background-color: red">
+		<img src="1.png">
+		<img src="2.png">
+		<img src="3.png">
+		<img src="4.png">
+		<img src="5.png">
+		<img src="6.png">
+		<img src="7.png">
+		<img src="8.png">
+		<img src="9.png">
+		<img src="10.png">
+		<img src="11.png">
+		<img src="12.png">
+		<img src="13.png">
+		<img src="14.png">
+		<img src="15.png">
+		<img src="16.png">
+		<img src="17.png">
+		<img src="18.png">
+		<img src="19.png">
+		<img src="20.png">
+		<img src="21.png">
+		<img src="22.png">
+		<img src="23.png">
+		<img src="24.png">
+		<img src="25.png">
+		<img src="26.png">
+	</div>
+	
+</body>
+
+<style type="text/css">
+	img{
+		max-width: 25px;
+	}
+</style>
+
+<script type="text/javascript">
+	var imgs = document.images;
+	var count = imgs.length;
+	var cont = document.getElementById('cont');
+	var load = 0;
+	var img = null;
+	var prog = document.getElementById('prog');
+	for(var i=0; i<count; i++){
+		img = new Image();
+		img.src = imgs[i].src;
+		img.onload = function(){
+			load++;
+			prog.innerHTML = load;
+			if (load == count) {
+				cont.style.display = "block";
+				console.log("yes");
+			}
+		}
+	}
+	
+</script>
+
+</html>
