@@ -56,7 +56,7 @@
 		img.src = imgs[i].src;
 		img.onload = function(){
 			load++;
-			prog.innerHTML = load;
+			prog.innerHTML = Math.floor((load/count)*100)+" %";
 			if (load == count) {
 				cont.style.display = "block";
 				console.log("yes");
