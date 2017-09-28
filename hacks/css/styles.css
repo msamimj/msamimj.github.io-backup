@@ -101,6 +101,7 @@ header.scrolled #header-links a:hover{
     text-decoration: none;
     color: rgba(255,255,255,0.7);
 	padding-right:10px;
+	cursor: pointer;
 }
 
 #menu-button:hover{
@@ -116,7 +117,6 @@ header.scrolled #header-links a:hover{
     color: black;
     padding-top: 1em;
     text-align: center;
-    /* font-size: 1.3em; */
     z-index: 100;
 }
 
@@ -165,11 +165,6 @@ header.scrolled #header-links a:hover{
 	width: 100%;
 }
 
-#landing-event{
-	font-size: 3.5em;
-	text-align: center;
-}
-
 #landing-hack{
 	font-size: 4.3em;
 	font-family:'logo', Arial, sans-serif;
@@ -188,30 +183,76 @@ header.scrolled #header-links a:hover{
 	width: 15%;
 }
 
-#landing-register{
+#landing-register, #landing-register2{
+	line-height: 1em;
 	position: absolute;
 	top: 80%;
 	left: 50%;
-	transform: translateX(-50%);
-	padding: .2em 1.2em;
+	padding: .2em .5em;
 	border: 3px solid white;
 	font-size: 1.5em;
 	cursor: pointer;
+	text-align: center;
+}
+
+#landing-register{
+	transform: translateX(-102%);
+}
+
+#landing-register2{
+	transform: translateX(2%);
 }
 
 @media (max-width: 768px){
+
 	#tec{
 		bottom: 13%;
 		right: 50%;
 		transform: translateX(50%);
 		width: 33%
 	}
-	#landing-register{
-		top: 65%
+
+	#landing-register, #landing-register2{
+		top: 60%
+	}
+
+	#landing-date{
+		top: 23%;
+		font-size: 2em;
+	}
+
+	#landing-name{
+		top: 38%;
+		width: 100%;
+	}
+
+	#landing-hack{
+		font-size: 2.8em;
+		font-family:'logo', Arial, sans-serif;
+		text-align: center;
+	}
+
+	#landing-nit{
+		font-size: 1.5em;
+		text-align: center;
 	}
 }
 
-#landing-register:hover{
+@media (max-width: 360px){
+
+	#landing-hack{
+		font-size: 2.3em;
+		font-family:'logo', Arial, sans-serif;
+		text-align: center;
+	}
+
+	#landing-nit{
+		font-size: 1.5em;
+		text-align: center;
+	}
+}
+
+#landing-register:hover, #landing-register2:hover{
 	background: rgba(255,255,255,0.2);
 }
 
@@ -508,12 +549,6 @@ header.scrolled #header-links a:hover{
 	}
 	.content{
 		padding: 70px 30px 30px;
-	}
-	#landing-hack{
-		font-size: 2.7em;
-	}
-	#landing-nit{
-		font-size: 1.5em;
 	}
 }
 

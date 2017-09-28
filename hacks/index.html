@@ -14,32 +14,32 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/pagination.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script>
+	<script src="js/smooth.js"></script>
 </head>
 <body>
 	<header> <!-- Start Header -->
 		<img src="img/logo-small-black.PNG" id="header-logo">
 		<span id="header-logo-text">NITS HACKS 1.0</span>        
 		<span id="header-links">
-			<a href="#about" class="hidden-xs smoothScroll ">ABOUT</a>
-			<a href="#sponsors" class="hidden-xs smoothScroll">HACKATHON</a>
-			<a href="#contact" class="hidden-xs smoothScroll">CODING C.</a>
-			<a href="#faq" class="hidden-xs smoothScroll">FAQ</a>
-			<a href="#reach" class="hidden-xs smoothScroll">HOW TO REACH</a>
-			<a href="#team" class="hidden-xs smoothScroll">TEAM</a>
-			<a href="#menu" data-toggle="collapse" id="menu-button" class="hidden-lg hidden-md hidden-sm">
+			<a data-scroll href="#about" class="hidden-xs smoothscroll">ABOUT</a>
+			<a data-scroll href="#sponsors" class="hidden-xs">HACKATHON</a>
+			<a data-scroll href="#contact" class="hidden-xs">CODING C.</a>
+			<a data-scroll href="#faq" class="hidden-xs">FAQ</a>
+			<a data-scroll href="#reach" class="hidden-xs">HOW TO REACH</a>
+			<a data-scroll href="#team" class="hidden-xs">TEAM</a>
+			<a data-target="#menu" data-toggle="collapse" id="menu-button" class="hidden-lg hidden-md hidden-sm">
 				<span class="glyphicon glyphicon-menu-hamburger"></span>
 			</a>
 		</span>
 	</header> <!--End Header -->
 	<div id="menu" class="collapse hidden-lg hidden-md hidden-sm">
 		<ul id="menu-links">
-			<li><a href="#about">ABOUT</a></li>
-			<li><a href="#sponsors">HACKATHON</a></li>
-			<li><a href="#contact">CODING C.</a></li>
-			<li><a href="#faq">FAQ</a></li>
-			<li><a href="#reach">HOW TO REACH</a></li>
-			<li><a href="#team">TEAM</a></li>
+			<li><a data-scroll href="#about">ABOUT</a></li>
+			<li><a data-scroll href="#sponsors">HACKATHON</a></li>
+			<li><a data-scroll href="#contact">CODING C.</a></li>
+			<li><a data-scroll href="#faq">FAQ</a></li>
+			<li><a data-scroll href="#reach">HOW TO REACH</a></li>
+			<li><a data-scroll href="#team">TEAM</a></li>
 		</ul>
 	</div>
 	<div class="container-fluid"> <!-- Start Container -->
@@ -51,7 +51,8 @@
 					<div id="landing-nit">NATIONAL INSTITUTE OF TECHNOLOGY SILCHAR</div>
 				</div>
 				<img src="img/tec.png" id="tec">
-				<div id="landing-register" onclick="window.open('https://goo.gl/forms/SDXXkJsxvyQbVmrV2')">REGISTER</div>
+				<div id="landing-register" onclick="window.open('https://goo.gl/forms/NWVacFz7isJG8jjl2')">REGISTER<br><span class="blue-text">FOR HACKATHON</span></div>
+				<div id="landing-register2" onclick="window.open('https://goo.gl/forms/SDXXkJsxvyQbVmrV2')">REGISTER<br><span class="blue-text">FOR CODING C.</span></div>
 			</div>
 		</div><!-- End Landing -->
 
@@ -61,55 +62,6 @@
 			<div class="col-sm-6 col-sm-offset-6 col-xs-12 content" id="about-content">
 				<div class="hidden-xs neuro" id="about-title">ABOUT<br>THE EVENT</div>
 				<div class="visible-xs neuro" id="about-title-sm">ABOUT<br>THE EVENT</div>
-				<!-- <div class="tabbable">
-					<ul class="nav nav-tabs" id="nav-tabs">
-						<li class="active"><a href="#tab1" data-toggle="tab">About</a></li>
-						<li><a href="#tab2" data-toggle="tab">Hackathon</a></li>
-						<li><a href="#tab3" data-toggle="tab">Coding</a></li>
-                        <li><a href="#tab4" data-toggle="tab">Coding</a></li>
-					</ul>
-					<div class="tab-content" style="margin-top: 1em;">
-						<div class="tab-pane active" id="tab1">
-							<p>
-								A technical twist to its annual Cultural fest Incandescence’17, NIT Silchar gladly announces ENVISION’17, its first ever Inter-College Hackathon Competition.
-							</p>
-							<p>
-								Hackathons, also known as the HACK DAY, HACKFEST or CODEFEST, are renowned events where in people holding expertise in different fields from computer programming to graphic designing work in harmony on software projects. <br>						
-								Hackathon typically last between a day and a week. ENVISION'17 which is being organized during the annual cultural fest of NIT SILCHAR INCANDESCENCE'17 will be a 24-hour long Hackathon and will be based on the theme SMART CITY.  In ENVISION’17, the top 30 contestants will be provided with a problem question and they have to think out of the box and come up with a solution, and build up a project(software/app) and deliver it with a suitable presentation.
-							</p>
-						</div>
-
-						<div class="tab-pane" id="tab2">
-							<p>
-								ENVISION’17 is a scheduled 24-hour Hackathon with contestants requiring to visualize and build solutions for a city incorporating its various aspects from infrastructure to communication, waste management and even market economy. To envision a ‘Smart City’, which is the theme for this Hackathon.
-							</p>
-							<p>
-								ENVISION will kick-start giving a platform to innovative brains for setting a perfect amalgamation of coding, designing and thinking to come up with actual implementation of ideas to tackle real life inconveniences. <br>
-                                A challenge to bring out the originality, the capability to think out of the box with the aid of technologically oriented tools. It’s a call out for the young innovative minds to step forward and design the future city.
-							</p>
-						</div>
-
-						<div class="tab-pane" id="tab3">
-							<p>
-								The theme essentially idealises how a modern city should be like in present context portraying its advancement in various domains like overall infrastructure, sustainable real estate, communication and market viability.
-							<br>
-								‘Smart Cities’ tap a range of approaches – digital and information technologies, best practices of urban planning, public-private partnerships, and policy change.It also provides solutions for waste management, pollution control, transport system and even burning issues like cashless economy.
-							</p>
-							<p>
-								HACKATHON would serve to be a perfect platform for young minds to deliver ‘out of the box’ideas through coding and designing that would eventually contribute to overcome the conventional inconveniences faced by people. Comprehensive development in this way will drive economic growth and improve the quality of life of the people by enhancing local area development.
-							</p>
-							
-						</div>
-                        <div class="tab-pane" id="tab4">
-							<p>
-								A Hackathon comes with its own bundle of perks and hence ENVISION too does. The winners of ENVISION'17 will get cash prizes valued from ₹10000(1st prize), ₹5000(2nd prize) and ₹3000(3rd prize). You also get to witness the expert talks of the people coming from different organisations and companies.</p><p>
-                                Just like any other traditional Hackathon, ENVISION would also provide pizzas and energy drinks to its contestants to sustain the 24-hour long brainstorming. You also get a chance to win goodies including t-shirts and free passes to the cultural extravaganza of NIT Silchar, INCANDESCENCE’17.<br>
-                                Hackathon is no ordinary coding competition rather it is a chance to bring out an idea that could have a great impact in the society. Come and be a part of this joy of coding and shine out to the world with some exclusive ideas.
-							</p>
-							
-						</div>
-					</div>
-				</div> -->
 				<p class="hidden-xs">
 					Say hello to the grandest of 2 days comprising of various events to satisfy any student's technical hunger. <span class="blue-text">NITS::HACKS 1.0</span> is all about providing the enthusiasts with the taste of the emerging technical aspects of real life applications. With the idea of bringing a pack of celebrated minds in the field of tech on the same stage, there will be a number of workshops organised for guiding any tech aspirant through their respective area of interest.
 				</p>
@@ -265,11 +217,13 @@
 			<div class="col-sm-6 col-xs-12" id="team-image" style="z-index: 49"></div>
 		</div><!-- End Sponsors -->
 
-		<!-- <script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnnBCCdh7-FUGQTLgIuXcFD4rqJdX0wP8&callback=initMap">
-	</script> -->
-
 </div> <!-- End Conatiner -->
+
+<script type="text/javascript">
+	
+	var scroll = new SmoothScroll('a[href*="#"]');
+
+</script>
 
 <script type="text/javascript">
 	$(window).scroll(function(){
@@ -287,15 +241,15 @@
 		<h3>NITS::HACKS <span>1.0</span></h3>
 
 		<p class="footer-links">
-			<a href="#about" class="hidden-xs hiddden-sm smoothScroll">ABOUT</a>
+			<a data-scroll href="#about" class="hidden-xs hiddden-sm">ABOUT</a>
 			·
-			<a href="#sponsors" class="hidden-xs hiddden-sm smoothScroll">HACKATHON</a>
+			<a data-scroll href="#sponsors" class="hidden-xs hiddden-sm">HACKATHON</a>
 			·
-			<a href="#contact" class="hidden-xs hiddden-sm smoothScroll">CODING C.</a>
+			<a data-scroll href="#contact" class="hidden-xs hiddden-sm">CODING C.</a>
 			·
-			<a href="#faq"class="hidden-xs hiddden-sm smoothScroll">FAQ</a>
+			<a data-scroll href="#faq"class="hidden-xs hiddden-sm">FAQ</a>
 			·
-			<a href="#reach" class="hidden-xs hiddden-sm smoothScroll">HOW TO REACH</a>
+			<a data-scroll href="#reach" class="hidden-xs hiddden-sm">HOW TO REACH</a>
 		</p>
 
 		<p class="footer-company-name">&copy; 2017 National Institute Of Technology Silchar</p>
@@ -324,7 +278,8 @@
 
 		<p class="footer-company-about">
 			<span>Stay Connected</span>
-		FOLLOW, LIKE, SHARE, SUBSCRIBE us for latest updates and announcements about Envision'17 				</p>
+			FOLLOW, LIKE, SHARE, SUBSCRIBE us for latest updates and announcements about NITS::HACKS 1.0
+		</p>
 
 		<div class="footer-icons">
 
