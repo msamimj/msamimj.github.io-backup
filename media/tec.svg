@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="400px" viewBox="0 0 600 400" enable-background="new 0 0 600 400" xml:space="preserve">
+<g>
+	<rect x="5" y="5" width="590" height="390"/>
+	<path fill="#95DAF8" d="M590,10v380H10V10H590 M600,0H0v400h600V0L600,0z"/>
+</g>
+<line fill="none" stroke="#95DAF8" stroke-width="10" stroke-miterlimit="10" x1="0" y1="68.806" x2="600" y2="68.806"/>
+<polygon opacity="0.5" fill="#F1F2F2" enable-background="new    " points="23.5,18.5 50.5,23.5 33,55.5 "/>
+<rect x="182.5" y="173.293" opacity="0.1" fill="#F1F2F2" width="252" height="116.174"/>
+<polygon opacity="0.1" fill="#F1F2F2" points="410.679,278.486 328.729,278.486 308.5,264.614 288.849,278.486 206.321,278.486 
+	206.321,184.275 410.679,184.275 "/>
+<rect x="248.389" y="156.532" opacity="0.3" fill="#F1F2F2" width="120.221" height="16.761"/>
+<circle fill="#95DAF8" cx="410.679" cy="207.395" r="12.138"/>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="400px" viewBox="0 0 600 400" enable-background="new 0 0 600 400" xml:space="preserve">
+<g>
+	<rect x="5" y="5" width="590" height="390"/>
+	<path fill="#95DAF8" d="M590,10v380H10V10H590 M600,0H0v400h600V0L600,0z"/>
+</g>
+<line stroke="#95DAF8" stroke-width="10" stroke-miterlimit="10" x1="0" y1="68.806" x2="600" y2="68.806"/>
+<circle opacity="0.5" fill="#F1F2F2" cx="39.104" cy="36.598" r="20"/>
+<rect x="78.5" y="203" opacity="0.2" fill="#F1F2F2" width="200" height="25"/>
+<rect x="103.5" y="245.607" opacity="0.1" fill="#F1F2F2" width="150" height="12"/>
+<g>
+	<rect x="381" y="188" opacity="0.1" fill="#F1F2F2" width="50" height="97.607"/>
+	<rect x="406" y="210" opacity="0.1" fill="#F1F2F2" width="50" height="75.607"/>
+	<rect x="422" y="159" opacity="0.1" fill="#F1F2F2" width="50" height="126.607"/>
+	<rect x="447" y="197" opacity="0.1" fill="#F1F2F2" width="50" height="88.607"/>
+	<rect x="370" y="285.304" opacity="0.3" fill="#F1F2F2" width="138" height="7.937"/>
+	<rect x="379.089" y="293.24" opacity="0.2" fill="#F1F2F2" width="122.002" height="5.578"/>
+	<rect x="396" y="138" fill="none" stroke="#95DAF8" stroke-width="10" stroke-miterlimit="10" width="91" height="180"/>
+	<rect x="396" y="317" fill="none" stroke="#95DAF8" stroke-width="10" stroke-miterlimit="10" width="91" height="10.333"/>
+</g>
+</svg>
