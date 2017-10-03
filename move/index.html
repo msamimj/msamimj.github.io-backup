@@ -47,6 +47,7 @@
 <script type="text/javascript">
 	var box = document.getElementById("box");
 	var oneX = (900/600)*window.innerHeight;
+	var twoX = (1200/600)*window.innerHeight;
 	var oneW = (100/600)*window.innerHeight;
 	var onGround = true;
 
@@ -60,6 +61,16 @@
 			}			
 			setTimeout(() => {
 				if((scrollX>(oneX-10-(window.innerWidth/2+50)))&&(scrollX<(oneX+oneW+110-(window.innerWidth/2+50)))){
+					box.style.bottom = 200/600*window.innerHeight + "px";
+				}
+			}, 250)
+		}else if((scrollX>(twoX-10-(window.innerWidth/2+50)))&&(scrollX<(twoX+oneW+110-(window.innerWidth/2+50)))){			
+			if(onGround){
+				box.style.bottom = 270/600*window.innerHeight + "px";	
+				onGround = false;
+			}			
+			setTimeout(() => {
+				if((scrollX>(twoX-10-(window.innerWidth/2+50)))&&(scrollX<(twoX+oneW+110-(window.innerWidth/2+50)))){
 					box.style.bottom = 200/600*window.innerHeight + "px";
 				}
 			}, 250)
