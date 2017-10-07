@@ -1,6 +1,9 @@
+$(document).ready(function(){
+
+    console.log("load");
 
     var vwidth = window.innerWidth,
-    vheight = window.innerHeight,
+        vheight = window.innerHeight,
         cwidth = 0, //width of container containing the player components
         cheight = 0; //height of container containing the player components
 
@@ -155,3 +158,4 @@
         // var page15 = document.getElementById("page1.5");
         // page15.style.display = "none";
     }
+});
