@@ -1,4 +1,5 @@
 window.onload = function(){
+    alert("load");
     var vwidth = window.innerWidth,
     vheight = window.innerHeight,
         cwidth = 0, //width of container containing the player components
