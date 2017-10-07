@@ -1,5 +1,4 @@
-window.onload = function(){
-    alert("load");
+
     var vwidth = window.innerWidth,
     vheight = window.innerHeight,
         cwidth = 0, //width of container containing the player components
@@ -156,5 +155,3 @@ window.onload = function(){
         // var page15 = document.getElementById("page1.5");
         // page15.style.display = "none";
     }
-
-}
