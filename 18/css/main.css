@@ -1,6 +1,10 @@
+html{
+    overflow-x: hidden;
+}
+
 body{
+    overflow-x: hidden;
     margin: 0;
-    position: relative;
     font-family: 'Open Sans', sans-serif;
 }
 
