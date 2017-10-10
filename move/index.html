@@ -4,8 +4,11 @@
 	<title>Move</title>
 </head>
 	<body>
-		<img src="media/bg.png" id="bg">
-		<div id="box"></div>
+		<img src="media/bg1.png" id="bg">
+		<div id="box">
+			<img src="media/dex-right.png" id="dex">
+		</div>
+		<div id="inc"></div>
 	</body>
 </html>
 
@@ -21,24 +24,53 @@
 	}
 
 	#box{
-		height: 192px;
-		background-image: url('media/mario1.png');
-		background-position: center center;
-		background-size: cover;
-		width: 100px;
+		height: 320px;
+		width: 120px;
 		position: fixed;
 		left: 50%;
 		bottom: 0;
 		transform: translateX(-50%);
 		transition: all ease .2s;
+		z-index: 1000;
+		overflow: hidden;
 	}
+	#dex{
+		height: 320px;
+		width: 240px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#dex.walk{
+		animation: walk .5s steps(2) infinite;
+	}
+	@keyframes walk{
+		from{transform: translateX(0);}
+		to{transform: translateX(-100%);}
+	}
+	#inc{
+		background-image: url('media/inc1.png');
+		background-position: center center;
+		background-size: cover;
+		width: 0;
+		position: absolute;
+		transition: all ease 1s;
+		z-index: 750;
+	}
+
 </style>
 
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script type='text/javascript' src='js/jquery.mousewheel.js'></script>
 <script type="text/javascript">
+	var dex = document.getElementById("dex");
 	$('html, body').mousewheel(function(event, delta){
 		this.scrollLeft -= (20*delta);
+		if(delta>0){
+			dex.src = "media/dex-left.png";
+		}else{
+			dex.src = "media/dex-right.png";
+		}
 		event.preventDefault();
 	});
 </script>
@@ -46,37 +78,50 @@
 
 <script type="text/javascript">
 	var box = document.getElementById("box");
-	var oneX = (900/600)*window.innerHeight;
-	var twoX = (1200/600)*window.innerHeight;
-	var oneW = (100/600)*window.innerHeight;
+	var dex = document.getElementById("dex");
+	var inc = document.getElementById("inc");
+	var oneX = (1250/1000)*window.innerHeight;
+	var oneW = (300/1000)*window.innerHeight;
 	var onGround = true;
+
+	box.style.bottom = (100/1000)*window.innerHeight + "px";
+	inc.style.height = (300/1000)*window.innerHeight + "px";
+	inc.style.top = (30/1000)*window.innerHeight + "px";
+	inc.style.left = (1286/1000)*window.innerHeight + "px";
 
 	window.addEventListener('scroll', handleScroll);
 
+	var scrolling;
+
 	function handleScroll(){
-		if((scrollX>(oneX-10-(window.innerWidth/2+50)))&&(scrollX<(oneX+oneW+110-(window.innerWidth/2+50)))){			
+
+		clearTimeout(scrolling);
+		dex.className = "walk";
+
+		scrolling = setTimeout(() => {
+			dex.className = "";
+		}, 260)
+
+		if( ( scrollX>( oneX-( window.innerWidth/2 )-60 ) ) && ( scrollX<( oneX+oneW+120-( window.innerWidth/2 )-60 ) ) ){			
 			if(onGround){
-				box.style.bottom = 270/600*window.innerHeight + "px";	
+				box.style.bottom = (300/1000)*window.innerHeight + "px";	
 				onGround = false;
 			}			
 			setTimeout(() => {
-				if((scrollX>(oneX-10-(window.innerWidth/2+50)))&&(scrollX<(oneX+oneW+110-(window.innerWidth/2+50)))){
-					box.style.bottom = 200/600*window.innerHeight + "px";
-				}
-			}, 250)
-		}else if((scrollX>(twoX-10-(window.innerWidth/2+50)))&&(scrollX<(twoX+oneW+110-(window.innerWidth/2+50)))){			
-			if(onGround){
-				box.style.bottom = 270/600*window.innerHeight + "px";	
-				onGround = false;
-			}			
-			setTimeout(() => {
-				if((scrollX>(twoX-10-(window.innerWidth/2+50)))&&(scrollX<(twoX+oneW+110-(window.innerWidth/2+50)))){
-					box.style.bottom = 200/600*window.innerHeight + "px";
+				if( ( scrollX>( oneX-(window.innerWidth/2)-60 ) ) && ( scrollX<( oneX+oneW+120-(window.innerWidth/2)-60 ) ) ){
+					box.style.bottom = (250/1000)*window.innerHeight + "px";
 				}
 			}, 250)
 		}else{
-			box.style.bottom = 100/600*window.innerHeight + "px";
+			box.style.bottom = (100/1000)*window.innerHeight + "px";
 			onGround = true;
 		}
+
+
+		if( scrollX>( oneX+( oneW/2 )-(window.innerWidth/2)-60 ) ){
+			inc.style.width = (912/1000)*window.innerHeight + "px";
+		}
+
+
 	}
 </script>
