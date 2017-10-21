@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Move</title>
 </head>
 	<body>
 		<img src="media/bg2.png" id="bg">
 		<div id="box">
-			<img src="media/dex-right.png" id="dex">
+			<img src="media/dex-right.png" id="character">
 		</div>
 		<div id="inc"></div>
 		<img src="media/flask.gif" id="flask">
@@ -39,14 +41,14 @@
 		z-index: 1000;
 		overflow: hidden;
 	}
-	#dex{
+	#character{
 		height: 295px;
 		width: 300px;
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
-	#dex.walk{
+	#character.walk{
 		animation: walk 1s steps(3) infinite;
 	}
 	@keyframes walk{
@@ -87,7 +89,7 @@
 		animation: rotate 1s linear infinite;
 	}
 	#level1{
-		transition: all ease .5s;
+		transition: all linear .5s;
 		z-index: 2000;
 		position: absolute;
 		height: 0;
@@ -99,58 +101,60 @@
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script type='text/javascript' src='js/jquery.mousewheel.js'></script>
 <script type="text/javascript">
-	var dex = document.getElementById("dex");
+	var character = document.getElementById("character");
 	var part = 0;
 	$('html, body').mousewheel(function(event, delta){
 		this.scrollLeft -= (20*delta);
 		if(delta>0){
 			if(part==0){
-				dex.src = "media/dex-left.png";
+				character.src = "media/dex-left.png";
 			}else if(part==1){
-				dex.src = "media/bravo-left.png";
+				character.src = "media/bravo-left.png";
 			}
 		}else{
 			if(part==0){
-				dex.src = "media/dex-right.png";
+				character.src = "media/dex-right.png";
 			}else if(part==1){
-				dex.src = "media/bravo-right.png";
+				character.src = "media/bravo-right.png";
 			}		
 		}
 		event.preventDefault();
 	});
 
+	var ratio = window.innerHeight/1000;
+
 	var box = document.getElementById("box");
-	var dex = document.getElementById("dex");
+	var character = document.getElementById("character");
 	var inc = document.getElementById("inc");
 	var flask = document.getElementById("flask");
 	var door1 = document.getElementById("door1");
 	var door1side = document.getElementById("door1side");
 	var fan1 = document.getElementById("fan1");
-	var oneX = (1250/1000)*window.innerHeight;
-	var oneW = (300/1000)*window.innerHeight;
-	var doorX = (3505/1000)*window.innerHeight;
+	var oneX = 1250*ratio;
+	var oneW = 300*ratio;
+	var doorX = 3505*ratio;
 	var level1 = document.getElementById("level1");
-	var level1X = (4000/1000)*window.innerHeight;
-	var level1W = (500/1000)*window.innerHeight;
+	var level1X = 4000*ratio;
+	var level1W = 500*ratio;
 
 	var onGround = true;
 
-	box.style.bottom = (100/1000)*window.innerHeight + "px";
-	inc.style.height = (300/1000)*window.innerHeight + "px";
-	inc.style.top = (30/1000)*window.innerHeight + "px";
-	inc.style.left = (1286/1000)*window.innerHeight + "px";
-	flask.style.left = (2460/1000)*window.innerHeight + "px";
-	flask.style.bottom = (341/1000)*window.innerHeight + "px";
-	door1.style.height = (523/1000)*window.innerHeight + "px";
-	door1.style.bottom = (110/1000)*window.innerHeight + "px";
-	door1.style.left = (3505/1000)*window.innerHeight + "px";
-	door1side.style.width = (56/1000)*window.innerHeight + "px";
-	door1side.style.bottom = (95/1000)*window.innerHeight + "px";
-	door1side.style.left = (3451/1000)*window.innerHeight + "px";
-	fan1.style.left = ((3405-33)/1000)*window.innerHeight + "px";
-	fan1.style.top = ((140-36)/1000)*window.innerHeight + "px";
-	fan1.style.width = (66/1000)*window.innerHeight + "px";
-	level1.style.left = (4000/1000)*window.innerHeight + "px";
+	box.style.bottom = 100*ratio + "px";
+	inc.style.height = 300*ratio + "px";
+	inc.style.top = 30*ratio + "px";
+	inc.style.left = 1286*ratio + "px";
+	flask.style.left = 2460*ratio + "px";
+	flask.style.bottom = 341*ratio + "px";
+	door1.style.height = 523*ratio + "px";
+	door1.style.bottom = 110*ratio + "px";
+	door1.style.left = 3505*ratio + "px";
+	door1side.style.width = 56*ratio + "px";
+	door1side.style.bottom = 95*ratio + "px";
+	door1side.style.left = 3451*ratio + "px";
+	fan1.style.left = (3405-33)*ratio + "px";
+	fan1.style.top = (140-36)*ratio + "px";
+	fan1.style.width = 66*ratio + "px";
+	level1.style.left = 4000*ratio + "px";
 	level1.style.top = "0px";
 	level1.style.width = level1W + "px";
 
@@ -161,39 +165,39 @@
 	function handleScroll(){
 
 		clearTimeout(scrolling);
-		dex.className = "walk";
+		character.className = "walk";
 
 		scrolling = setTimeout(() => {
-			dex.className = "";
+			character.className = "";
 		}, 666)
 
 		if( ( scrollX>( oneX-( window.innerWidth/2 )-50 ) ) && ( scrollX<( oneX+oneW+120-( window.innerWidth/2 )-50 ) ) ){			
 			if(onGround){
-				box.style.bottom = (300/1000)*window.innerHeight + "px";	
+				box.style.bottom = 300*ratio + "px";	
 				onGround = false;
 			}			
 			setTimeout(() => {
 				if( ( scrollX>( oneX-(window.innerWidth/2)-50 ) ) && ( scrollX<( oneX+oneW+120-(window.innerWidth/2)-50 ) ) ){
-					box.style.bottom = (250/1000)*window.innerHeight + "px";
+					box.style.bottom = 250*ratio + "px";
 				}
 			}, 250)
 		}else{
-			box.style.bottom = (100/1000)*window.innerHeight + "px";
+			box.style.bottom = 100*ratio + "px";
 			onGround = true;
 		}
 
 		if( scrollX>( oneX+( oneW/2 )-(window.innerWidth/2)-50 ) ){
-			inc.style.width = (912/1000)*window.innerHeight + "px";
+			inc.style.width = 912*ratio + "px";
 		}
 
 		if( scrollX>( doorX-(window.innerWidth/2)-50) ){
-			door1.style.width = (268/1000)*window.innerHeight + "px";
+			door1.style.width = 268*ratio + "px";
 		}else{
 			door1.style.width = 0 + "px";
 		}
 
 		if( scrollX>( level1X-(window.innerWidth/2)-70 ) && scrollX<( level1X+level1W-(window.innerWidth/2)+70 ) ){
-			level1.style.height = (900/1000)*window.innerHeight + "px";
+			level1.style.height = 900*ratio + "px";
 		}else{
 			level1.style.height = "0px";
 		}
