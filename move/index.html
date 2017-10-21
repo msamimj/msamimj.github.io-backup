@@ -4,11 +4,16 @@
 	<title>Move</title>
 </head>
 	<body>
-		<img src="media/bg1.png" id="bg">
+		<img src="media/bg2.png" id="bg">
 		<div id="box">
 			<img src="media/dex-right.png" id="dex">
 		</div>
 		<div id="inc"></div>
+		<img src="media/flask.gif" id="flask">
+		<img src="media/door1.png" id="door1">
+		<img src="media/door1side.png" id="door1side">
+		<img src="media/fan1.png" id="fan1">
+		<img src="media/level.png" id="level1">
 	</body>
 </html>
 
@@ -24,8 +29,8 @@
 	}
 
 	#box{
-		height: 320px;
-		width: 120px;
+		height: 295px;
+		width: 100px;
 		position: fixed;
 		left: 50%;
 		bottom: 0;
@@ -35,14 +40,14 @@
 		overflow: hidden;
 	}
 	#dex{
-		height: 320px;
-		width: 240px;
+		height: 295px;
+		width: 300px;
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
 	#dex.walk{
-		animation: walk .5s steps(2) infinite;
+		animation: walk 1s steps(3) infinite;
 	}
 	@keyframes walk{
 		from{transform: translateX(0);}
@@ -57,6 +62,37 @@
 		transition: all ease 1s;
 		z-index: 750;
 	}
+	#flask{
+		z-index: 750;
+		position: absolute;
+		width: 100px;
+	}
+	#door1{
+		z-index: 750;
+		position: absolute;
+		width: 0;
+		transition: width ease 0.6s;
+	}
+	#door1side{
+		z-index: 1100;
+		position: absolute;
+	}
+	@keyframes rotate{
+		from{transform: rotate(0deg);}
+		to{transform: rotate(180deg);}
+	}
+	#fan1{
+		z-index: 1000;
+		position: absolute;
+		animation: rotate 1s linear infinite;
+	}
+	#level1{
+		transition: all ease .5s;
+		z-index: 2000;
+		position: absolute;
+		height: 0;
+	}
+
 
 </style>
 
@@ -64,30 +100,59 @@
 <script type='text/javascript' src='js/jquery.mousewheel.js'></script>
 <script type="text/javascript">
 	var dex = document.getElementById("dex");
+	var part = 0;
 	$('html, body').mousewheel(function(event, delta){
 		this.scrollLeft -= (20*delta);
 		if(delta>0){
-			dex.src = "media/dex-left.png";
+			if(part==0){
+				dex.src = "media/dex-left.png";
+			}else if(part==1){
+				dex.src = "media/bravo-left.png";
+			}
 		}else{
-			dex.src = "media/dex-right.png";
+			if(part==0){
+				dex.src = "media/dex-right.png";
+			}else if(part==1){
+				dex.src = "media/bravo-right.png";
+			}		
 		}
 		event.preventDefault();
 	});
-</script>
 
-
-<script type="text/javascript">
 	var box = document.getElementById("box");
 	var dex = document.getElementById("dex");
 	var inc = document.getElementById("inc");
+	var flask = document.getElementById("flask");
+	var door1 = document.getElementById("door1");
+	var door1side = document.getElementById("door1side");
+	var fan1 = document.getElementById("fan1");
 	var oneX = (1250/1000)*window.innerHeight;
 	var oneW = (300/1000)*window.innerHeight;
+	var doorX = (3505/1000)*window.innerHeight;
+	var level1 = document.getElementById("level1");
+	var level1X = (4000/1000)*window.innerHeight;
+	var level1W = (500/1000)*window.innerHeight;
+
 	var onGround = true;
 
 	box.style.bottom = (100/1000)*window.innerHeight + "px";
 	inc.style.height = (300/1000)*window.innerHeight + "px";
 	inc.style.top = (30/1000)*window.innerHeight + "px";
 	inc.style.left = (1286/1000)*window.innerHeight + "px";
+	flask.style.left = (2460/1000)*window.innerHeight + "px";
+	flask.style.bottom = (341/1000)*window.innerHeight + "px";
+	door1.style.height = (523/1000)*window.innerHeight + "px";
+	door1.style.bottom = (110/1000)*window.innerHeight + "px";
+	door1.style.left = (3505/1000)*window.innerHeight + "px";
+	door1side.style.width = (56/1000)*window.innerHeight + "px";
+	door1side.style.bottom = (95/1000)*window.innerHeight + "px";
+	door1side.style.left = (3451/1000)*window.innerHeight + "px";
+	fan1.style.left = ((3405-33)/1000)*window.innerHeight + "px";
+	fan1.style.top = ((140-36)/1000)*window.innerHeight + "px";
+	fan1.style.width = (66/1000)*window.innerHeight + "px";
+	level1.style.left = (4000/1000)*window.innerHeight + "px";
+	level1.style.top = "0px";
+	level1.style.width = level1W + "px";
 
 	window.addEventListener('scroll', handleScroll);
 
@@ -100,15 +165,15 @@
 
 		scrolling = setTimeout(() => {
 			dex.className = "";
-		}, 260)
+		}, 666)
 
-		if( ( scrollX>( oneX-( window.innerWidth/2 )-60 ) ) && ( scrollX<( oneX+oneW+120-( window.innerWidth/2 )-60 ) ) ){			
+		if( ( scrollX>( oneX-( window.innerWidth/2 )-50 ) ) && ( scrollX<( oneX+oneW+120-( window.innerWidth/2 )-50 ) ) ){			
 			if(onGround){
 				box.style.bottom = (300/1000)*window.innerHeight + "px";	
 				onGround = false;
 			}			
 			setTimeout(() => {
-				if( ( scrollX>( oneX-(window.innerWidth/2)-60 ) ) && ( scrollX<( oneX+oneW+120-(window.innerWidth/2)-60 ) ) ){
+				if( ( scrollX>( oneX-(window.innerWidth/2)-50 ) ) && ( scrollX<( oneX+oneW+120-(window.innerWidth/2)-50 ) ) ){
 					box.style.bottom = (250/1000)*window.innerHeight + "px";
 				}
 			}, 250)
@@ -117,11 +182,27 @@
 			onGround = true;
 		}
 
-
-		if( scrollX>( oneX+( oneW/2 )-(window.innerWidth/2)-60 ) ){
+		if( scrollX>( oneX+( oneW/2 )-(window.innerWidth/2)-50 ) ){
 			inc.style.width = (912/1000)*window.innerHeight + "px";
 		}
 
+		if( scrollX>( doorX-(window.innerWidth/2)-50) ){
+			door1.style.width = (268/1000)*window.innerHeight + "px";
+		}else{
+			door1.style.width = 0 + "px";
+		}
+
+		if( scrollX>( level1X-(window.innerWidth/2)-70 ) && scrollX<( level1X+level1W-(window.innerWidth/2)+70 ) ){
+			level1.style.height = (900/1000)*window.innerHeight + "px";
+		}else{
+			level1.style.height = "0px";
+		}
+
+		if( scrollX>( level1X-(window.innerWidth/2) + level1W/2 ) ){
+			part = 1;
+		}else{
+			part = 0;
+		}
 
 	}
 </script>
