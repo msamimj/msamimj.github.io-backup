@@ -2,6 +2,8 @@ body{
 	position: relative;
 	margin: 0;
 	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
 }
 
 #bg{
@@ -66,8 +68,8 @@ body{
 }
 
 #box{
-	height: 265px;
-	width: 90px;
+	/*height: 265px;
+	width: 90px;*/
 	position: fixed;
 	left: 50%;
 	bottom: 0;
@@ -77,8 +79,8 @@ body{
 	overflow: hidden;
 }
 #character{
-	height: 265px;
-	width: 270px;
+	/*height: 265px;
+	width: 270px;*/
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -273,6 +275,16 @@ body{
 	font-family: 'Architects Daughter', sans-serif;
 	font-size: 1.2em;
 	line-height: 1.8em
+}
+
+@media screen and (max-width: 720px){
+	.modal-content{
+		height: calc(100% - 40px);
+		padding: 0 50px 0 15px;
+		margin: 25px 0 15px 0;
+		font-size: 1em;
+		line-height: 1.5em;
+	}	
 }
 
 .modal-content::-webkit-scrollbar {
@@ -969,6 +981,330 @@ body{
 	top: 40%;
 	transform: translateY(-50%);
 	opacity: 0;
+}
+
+@media screen and (max-width: 720px){
+
+	#bclose{
+		position: absolute;
+		top: 2vw;
+		right: 2vw;
+		width: 10vw;
+		height: 10vw;
+		cursor: pointer;
+	}
+
+	#cep{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 60vw;
+		width: 30vw;
+		transition: all 1s;
+		cursor: pointer;
+	}
+
+	#cep.next{
+		left: 5vw;
+		width: 15vw;
+		top: 14vw;
+		transform: translateY(0);
+	}
+
+	#team1{
+		width: 10vw;
+		height: 10vw;
+		position: absolute;
+		left: 2vw;
+		bottom: calc(100% - 12vw);
+		background-image: url('../media/bcon.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#team2{
+		width: 10vw;
+		height: 10vw;
+		position: absolute;
+		left: 14vw;
+		bottom: calc(100% - 12vw);
+		background-image: url('../media/bexe.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#team3{
+		width: 10vw;
+		height: 10vw;
+		position: absolute;
+		left: 26vw;
+		bottom: calc(100% - 12vw);
+		background-image: url('../media/btec.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#team4{
+		width: 10vw;
+		height: 10vw;
+		position: absolute;
+		left: 38vw;
+		bottom: calc(100% - 12vw);
+		background-image: url('../media/bmar.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#team5{
+		width: 10vw;
+		height: 10vw;
+		position: absolute;
+		left: 50vw;
+		bottom: calc(100% - 12vw);
+		background-image: url('../media/blog.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#team6{
+		width: 10vw;
+		height: 10vw;
+		position: absolute;
+		left: 62vw;
+		bottom: calc(100% - 12vw);
+		background-image: url('../media/bweb.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#team7{
+		width: 10vw;
+		height: 10vw;
+		position: absolute;
+		left: 74vw;
+		bottom: calc(100% - 12vw);
+		background-image: url('../media/bdec.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#pad{
+		position: absolute;
+		bottom: 5vw;
+		left: 5vw;
+		height: calc(100% - 40vw);
+		width: auto;
+		max-width: 45vw;
+		/*transform: rotate(90deg);*/
+	}
+
+	.svg{
+		width: calc(50vh - 20vw);
+		max-width: 45vw;
+		height: calc(50vh - 20vw);
+		position: absolute;
+		bottom: 5vw;
+		left: 5vw;
+		display: none;
+	}
+
+	#pencil{
+		position: absolute;
+		max-height: 50vh;
+		left: 6vw;
+		bottom: 22vh;
+	}
+
+	#pencil.write{
+		animation: writePencil .7s 1 linear;
+	}
+
+	@keyframes writePencil{
+		0%{
+			left: 5vw;
+			bottom: 22vw;
+		}
+		50%{
+			left: 40vw;
+			bottom: 34vw;
+		}
+		63%{
+			left: 10vw;
+			bottom: 27vw;
+		}
+		88%{
+			left: 35vw;
+			bottom: 32vw;
+		}
+		100%{
+			left: 104px;
+			bottom: 202px;
+		}
+	}
+
+	.team-image{
+		width: 30vw;
+		max-width: 40vw;
+		transition: all 1s;
+	}
+
+	#dev{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#bhawani{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#aniket{
+		position: absolute;
+		left: 60vw;
+		top: 65%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#ronit{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#deepak{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#naveen{
+		position: absolute;
+		left: 60vw;
+		top: 65%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#udit{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#sonal{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#vishnu{
+		position: absolute;
+		left: 60vw;
+		top: 65%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#khatri{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#ankit{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#prantik{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#samim{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#kunal{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#satyam{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#manish{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#satyamp{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#shrinjay{
+		position: absolute;
+		left: 60vw;
+		top: 65%;
+		transform: translateY(0);
+		opacity: 0;
+	}
 }
 
 @keyframes appear{
