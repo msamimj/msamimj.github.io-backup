@@ -692,11 +692,24 @@ body{
 	transform: translateY(-100%);
 }
 
-#team1{
+#team0{
 	width: 60px;
 	height: 60px;
 	position: absolute;
 	left: 50px;
+	bottom: 30px;
+	background-image: url('../media/bpat.svg');
+	background-size: 100% 100%;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 10000;
+}
+
+#team1{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 130px;
 	bottom: 30px;
 	background-image: url('../media/bcon.svg');
 	background-size: 100% 100%;
@@ -709,7 +722,7 @@ body{
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	left: 130px;
+	left: 210px;
 	bottom: 30px;
 	background-image: url('../media/bexe.svg');
 	background-size: 100% 100%;
@@ -722,7 +735,7 @@ body{
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	left: 210px;
+	left: 290px;
 	bottom: 30px;
 	background-image: url('../media/btec.svg');
 	background-size: 100% 100%;
@@ -735,7 +748,7 @@ body{
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	left: 290px;
+	left: 370px;
 	bottom: 30px;
 	background-image: url('../media/bmar.svg');
 	background-size: 100% 100%;
@@ -748,7 +761,7 @@ body{
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	left: 370px;
+	left: 450px;
 	bottom: 30px;
 	background-image: url('../media/blog.svg');
 	background-size: 100% 100%;
@@ -761,7 +774,7 @@ body{
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	left: 450px;
+	left: 530px;
 	bottom: 30px;
 	background-image: url('../media/bweb.svg');
 	background-size: 100% 100%;
@@ -774,7 +787,7 @@ body{
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	left: 530px;
+	left: 610px;
 	bottom: 30px;
 	background-image: url('../media/bdec.svg');
 	background-size: 100% 100%;
@@ -837,6 +850,22 @@ body{
 	width: 250px;
 	max-width: 15vw;
 	transition: all 1s;
+}
+
+#rajat{
+	position: absolute;
+	left: 40vw;
+	top: 40%;
+	transform: translateY(-50%);
+	opacity: 0;
+}
+
+#ahmed{
+	position: absolute;
+	left: 60vw;
+	top: 40%;
+	transform: translateY(-50%);
+	opacity: 0;
 }
 
 #dev{
@@ -1011,12 +1040,25 @@ body{
 		transform: translateY(0);
 	}
 
-	#team1{
-		width: 10vw;
-		height: 10vw;
+	#team0{
+		width: 8vw;
+		height: 8vw;
 		position: absolute;
 		left: 2vw;
-		bottom: calc(100% - 12vw);
+		bottom: calc(100% - 10vw);
+		background-image: url('../media/bcon.svg');
+		background-size: 100% 100%;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+	}
+
+	#team1{
+		width: 8vw;
+		height: 8vw;
+		position: absolute;
+		left: 12vw;
+		bottom: calc(100% - 10vw);
 		background-image: url('../media/bcon.svg');
 		background-size: 100% 100%;
 		border-radius: 50%;
@@ -1025,11 +1067,11 @@ body{
 	}
 
 	#team2{
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		position: absolute;
-		left: 14vw;
-		bottom: calc(100% - 12vw);
+		left: 22vw;
+		bottom: calc(100% - 10vw);
 		background-image: url('../media/bexe.svg');
 		background-size: 100% 100%;
 		border-radius: 50%;
@@ -1038,11 +1080,11 @@ body{
 	}
 
 	#team3{
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		position: absolute;
-		left: 26vw;
-		bottom: calc(100% - 12vw);
+		left: 32vw;
+		bottom: calc(100% - 10vw);
 		background-image: url('../media/btec.svg');
 		background-size: 100% 100%;
 		border-radius: 50%;
@@ -1051,11 +1093,11 @@ body{
 	}
 
 	#team4{
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		position: absolute;
-		left: 38vw;
-		bottom: calc(100% - 12vw);
+		left: 42vw;
+		bottom: calc(100% - 10vw);
 		background-image: url('../media/bmar.svg');
 		background-size: 100% 100%;
 		border-radius: 50%;
@@ -1064,11 +1106,11 @@ body{
 	}
 
 	#team5{
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		position: absolute;
-		left: 50vw;
-		bottom: calc(100% - 12vw);
+		left: 52vw;
+		bottom: calc(100% - 10vw);
 		background-image: url('../media/blog.svg');
 		background-size: 100% 100%;
 		border-radius: 50%;
@@ -1077,11 +1119,11 @@ body{
 	}
 
 	#team6{
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		position: absolute;
 		left: 62vw;
-		bottom: calc(100% - 12vw);
+		bottom: calc(100% - 10vw);
 		background-image: url('../media/bweb.svg');
 		background-size: 100% 100%;
 		border-radius: 50%;
@@ -1090,11 +1132,11 @@ body{
 	}
 
 	#team7{
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		position: absolute;
-		left: 74vw;
-		bottom: calc(100% - 12vw);
+		left: 72vw;
+		bottom: calc(100% - 10vw);
 		background-image: url('../media/bdec.svg');
 		background-size: 100% 100%;
 		border-radius: 50%;
@@ -1160,6 +1202,22 @@ body{
 		width: 30vw;
 		max-width: 40vw;
 		transition: all 1s;
+	}
+
+	#rajat{
+		position: absolute;
+		left: 60vw;
+		top: 15%;
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	#ahmed{
+		position: absolute;
+		left: 60vw;
+		top: 40%;
+		transform: translateY(0);
+		opacity: 0;
 	}
 
 	#dev{

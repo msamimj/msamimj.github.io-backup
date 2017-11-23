@@ -750,6 +750,8 @@ function handleScroll(){
 		document.getElementById('manish').style.opacity = 0;
 		document.getElementById('satyamp').style.opacity = 0;
 		document.getElementById('shrinjay').style.opacity = 0;
+		document.getElementById('rajat').style.opacity = 0;
+		document.getElementById('ahmed').style.opacity = 0;
 	});
 
 	document.getElementById("cep").addEventListener('click', () => {
@@ -759,5 +761,4 @@ function handleScroll(){
 
 // window.onresize = function(){
 // 	location.reload(false);
-// 	console.log("res");
 // };
