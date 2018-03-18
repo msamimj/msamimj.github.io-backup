@@ -142,6 +142,10 @@ body{
 		border-bottom: 1px solid #aaa;
 	}
 
+	#landing-button2{
+		margin-top: 0;
+	}
+
 	@media (orientation: portrait){
 		#landing-tagline{
 			left: 50%;
@@ -158,6 +162,11 @@ body{
 		.landing-button{
 			font-size: 4vw;
 			padding: 2vw 4vw;
+			margin-top: 5vw;
+		}
+
+		#landing-button2{
+			margin-top: 2vw;
 		}
 	}
 
