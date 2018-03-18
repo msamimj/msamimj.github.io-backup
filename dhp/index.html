@@ -1,0 +1,161 @@
+<!doctype html>
+<head>
+	<title>DoorHopper</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="icon" type="text/css" href="media/icon.png">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+
+	<div id="container">
+
+		<div id="div0">
+			<img src="media/grad1.png" id="landing-grad">
+			<img src="media/grad2.png" id="landing-grad2">
+			<img src="media/sss.png" id="landing-sss">
+			<img src="media/icon.png" id="landing-logo">
+			<img src="media/logo.png" id="landing-logo-text">
+			<ul id="navlinks">
+				<li id="nav-consumer">For Consumers</li>
+				<li id="nav-merchant" class="active">For Merchants</li>
+			</ul>
+			<div id="landing-tagline">
+				<div class="consumer-content tagline">
+					Your Market<br>
+					In Your Pocket<br>
+				</div>
+				<div class="merchant-content tagline">
+					Bring Your<br>
+					Shop Online<br>
+				</div>
+				<div class="landing-button consumer-content" onclick="openCustomerApp()">
+					Get The App Now
+				</div>
+				<div class="landing-button merchant-content" onclick="openMerchantApp()">
+					Get The App Now
+				</div>
+				<br>
+				<div class="landing-button merchant-content" style="margin-top: -0.5em" onclick="openMerchantPanel()">
+					Log in to Merchant Panel
+				</div>
+			</div>
+		</div>
+
+		<div id="div1">
+			<div id="circle-left"></div>
+			<div id="circle-right"></div>
+			DoorHopper is a platform designed for vendors and businesses in the city to showcase, promote, and sell their products and services, with tailored digital facilities. Users can digitally access their local market from their homes.
+		</div>
+
+		<div id="div2">
+			<div class="tile consumer-content">
+				<img src="media/local-market.svg">
+				<div class="tile-title">Local Market Access</div>
+				<div class="tile-description">Access all products and services in your local market, online, through the DoorHopper App.</div>
+			</div>
+			<div class="tile consumer-content">
+				<img src="media/courier.svg">
+				<div class="tile-title">Pick and Drop</div>
+				<div class="tile-description">Have your goods transported to anywhere within your city.</div>
+			</div>
+			<div class="tile consumer-content">
+				<img src="media/purchase.svg">
+				<div class="tile-title">Purchase and Drop</div>
+				<div class="tile-description">Have goods purchased even from shops that are not listed in our app and get them delivered.</div>
+			</div>
+			<div class="tile consumer-content">
+				<img src="media/picture.svg">
+				<div class="tile-title">Order By Image</div>
+				<div class="tile-description">Avoid the hassle of browsing through products. Show us what you want, we will get it for you.</div>
+			</div>
+			<div class="tile consumer-content">
+				<img src="media/vendor.svg">
+				<div class="tile-title">Mobile Vendors</div>
+				<div class="tile-description">Get notified in real-time of arriving mobile vendors.</div>
+			</div>
+			<div class="tile consumer-content">
+				<img src="media/monitor.svg">
+				<div class="tile-title">Real-Time Monitoring</div>
+				<div class="tile-description">Track the status and on-route position of your package in real time.</div>
+			</div>
+
+
+			<div class="tile merchant-content">
+				<img src="media/virtual-store.svg">
+				<div class="tile-title">Virtual Store</div>
+				<div class="tile-description">Create an online presence and sell your products or services online.</div>
+			</div>
+			<div class="tile merchant-content">
+				<img src="media/vendor.svg">
+				<div class="tile-title">Place for Mobile Vendors</div>
+				<div class="tile-description">If you are a mobile vendor, reach people in real-time via DoorHopper.</div>
+			</div>
+			<div class="tile merchant-content">
+				<img src="media/money.svg">
+				<div class="tile-title">Extra Earning Platform</div>
+				<div class="tile-description">Earn extra by providing Ticket Booking, Reacharge and other online payments through DoorHopper.</div>
+			</div>
+			<div class="tile merchant-content">
+				<img src="media/customer.svg">
+				<div class="tile-title">Customer Management</div>
+				<div class="tile-description">Track customer activities in your store and generate reports.</div>
+			</div>
+			<div class="tile merchant-content">
+				<img src="media/management.svg">
+				<div class="tile-title">Shop Management Solutions</div>
+				<div class="tile-description">Manage your offline as well as online sales, purchases, billing, accounts; all through DoorHopper.</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div id="address">
+				Startup Centre<br>
+				NIT Silchar<br>
+				Cachar - 788010<br>
+				9954683549 / 9678576738<br>
+				contact@doorhopper.in
+			</div>
+			<div id="social-links">
+				<img class="social-icon" src="media/fb.png" onclick="openFb()">
+				<img class="social-icon" src="media/twitter.png" onclick="openTwitter()">
+				<img class="social-icon" src="media/instagram.png" onclick="openInsta()">
+				<img class="social-icon" src="media/youtube.png" onclick="openYoutube()">
+				<img class="social-icon" src="media/linkedin.png" onclick="openLinkedin()">
+			</div>
+			<div id="services">
+				Tiffin Services in Guwahati<br>
+				Financial Accountancy Service in Guwahati<br>
+				Laundry Services in Silchar<br>
+				Restaurants in Guwahati and Silchar
+			</div>
+		</div>
+	</div>	
+
+	<script type="text/javascript" src="scripts/main.js"></script>
+	<script type="text/javascript">
+		function openFb(){
+			open('https://www.fb.com/doorhopper');
+		}
+		function openTwitter(){
+			open('https://twitter.com/doorhopper');
+		}
+		function openInsta(){
+			open('https://www.instagram.com/doorhopper/');
+		}
+		function openYoutube(){
+			open('https://www.youtube.com/channel/UCT18BilhrkKD8vOviwdTM3g');
+		}
+		function openLinkedin(){
+			open('https://www.linkedin.com/company/doorhopper/');
+		}
+		function openCustomerApp(){
+			open('https://play.google.com/store/apps/details?id=vv.sci2home.user.doorhopper&hl=en');
+		}
+		function openMerchantApp(){
+			open('https://play.google.com/store/apps/details?id=vv.in.doorhopper.doorhopper_biz&hl=en');
+		}
+		function openMerchantPanel(){
+			open('https://biz.doorhopper.in');
+		}
+	</script>
+</body>
