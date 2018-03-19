@@ -113,6 +113,7 @@ body{
 	width: 5vw;
 	transition: opacity linear 1s;
 	opacity: 0;
+	z-index: 100;
 }
 
 #logo.appear{
