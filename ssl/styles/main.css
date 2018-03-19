@@ -131,10 +131,23 @@ body{
 	}
 }
 
+#contact-us{
+	cursor: pointer;
+	padding: 0.5em 1.5em;
+	background-color: #54799e;
+	position: relative;
+	color: #fff;
+	font-family: 'bagnard';
+	top: 2em;
+}
+
+#contact-us:hover{
+	background-color: #34597e;
+}
 
 .content{
 	text-align: center;
-	padding: 0 15vw 5vw;
+	padding: 0 15vw 10vw;
 	line-height: 1.6em;
 	color: #505ca9;
 	font-family: 'cicle';
@@ -259,10 +272,20 @@ body{
 #div4{
 	background-color: #eee;
 	padding: 5vw 15vw;
+	position: relative;
+}
+
+#testimonials{
+	width: 70vw;
+	overflow-x: hidden;
+	position: relative;
 }
 
 .testimonial{
+	display: inline-block;
 	text-align: center;
+	width: 70vw;
+	position: absolute;
 }
 
 .testimonial-image, .testimonial-stars{
@@ -280,6 +303,30 @@ body{
 .testimonial div{
 	font-family: 'cicle';
 	line-height: 1.8em;
+}
+
+#left-test{
+	width: 0; 
+	height: 0; 
+	border-top: 0.5em solid transparent;
+	border-bottom: 0.5em solid transparent;
+	border-right: 0.8em solid #54799e;
+	position: absolute;
+	left: 12vw;
+	top: 50%;
+	cursor: pointer;
+}
+
+#right-test{
+	width: 0; 
+	height: 0; 
+	border-top: 0.5em solid transparent;
+	border-bottom: 0.5em solid transparent;
+	border-left: 0.8em solid #54799e;
+	position: absolute;
+	right: 12vw;
+	top: 50%;
+	cursor: pointer;
 }
 
 @media (orientation: portrait){
