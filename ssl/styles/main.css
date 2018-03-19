@@ -312,7 +312,7 @@ body{
 	border-bottom: 0.5em solid transparent;
 	border-right: 0.8em solid #54799e;
 	position: absolute;
-	left: 12vw;
+	left: 10vw;
 	top: 50%;
 	cursor: pointer;
 }
@@ -324,12 +324,12 @@ body{
 	border-bottom: 0.5em solid transparent;
 	border-left: 0.8em solid #54799e;
 	position: absolute;
-	right: 12vw;
+	right: 10vw;
 	top: 50%;
 	cursor: pointer;
 }
 
-@media (orientation: portrait){
+/*@media (orientation: portrait){
 
 	#div4{
 		padding: 10vw 20vw;
@@ -350,7 +350,7 @@ body{
 		line-height: 1.5em;
 		font-size: 0.9em;
 	}
-}
+}*/
 
 #footer{
 	display: grid;
