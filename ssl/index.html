@@ -2,44 +2,31 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
 	<title>Silver Stag Labs</title>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<script src="particle/particles.min.js"></script>
+	<link rel="icon" href="media/logo.png">
 </head>
 <body>
 	<div id="container">
 		<div id="div0">
-			<div id="layer0">
-				
-			</div>
-			<div id="layer1">
+			<div id="layer1"></div>
+			<div id="layer2">
 				<img id="ssl_text" src="media/ssl_text.png">
-			</div>
-			<div id="layer2"></div>
-			<div id="layer3">
-				
-			</div>
+				<div id="ssl_tagline">Providing Intuitive Solutions</div>
+				<img id="bg_deer" src="media/bg_deer.svg">
+			</div>			
+			<div id="layer3"></div>
 		</div>
 		<div id="div1">
 			<img id="logo" src="media/logo.png">
 			<div id="content0" class="content">
-				<div class="non-mobile">
-					Silver Stag Labs is a artificial intelligence solutions company <br>
-					operating out of Bangalore. We build intelligent solutions <br>
-					for the business of tomorrow.
-				</div>
-				<div class="mobile">
-					Silver Stag Labs is a artificial intelligence solutions company	operating out of Bangalore. We build intelligent solutions for the business of tomorrow.
-				</div>
+				Silver Stag Labs is a artificial intelligence solutions company	operating out of Bangalore. We build intelligent solutions for the business of tomorrow
 			</div>
 			<div id="content1" class="content">
 				<span class="section_header">Our Vision</span>
-				<div class="non-mobile">
-					Intelligent solutions can enable the next drive of economic progress for the world.<br>
-					Our goal is to assist enterprises and businesses reach there<br>
-					faster and with greater efficiency. 
-				</div>
-				<div class="mobile">
+				<div>
 					Intelligent solutions can enable the next drive of economic progress for the world.
 					Our goal is to assist enterprises and businesses reach there
 					faster and with greater efficiency. 
@@ -51,33 +38,85 @@
 			<div id="content2">
 				<div>
 					<img src="media/str1.svg" class="str">
+					Here is a dummy description of the mentioned service.
 				</div>
 				<div>
 					<img src="media/str2.svg" class="str">
+					Here is a dummy description of the mentioned service.
 				</div>
 				<div>
 					<img src="media/str3.svg" class="str">
+					Here is a dummy description of the mentioned service.
 				</div>
 				<div>
 					<img src="media/str4.svg" class="str">
+					Here is a dummy description of the mentioned service.
 				</div>
 				<div>
 					<img src="media/str5.svg" class="str">
+					Here is a dummy description of the mentioned service.
 				</div>
 				<div>
 					<img src="media/str6.svg" class="str">
+					Here is a dummy description of the mentioned service.
 				</div>
 			</div>
 		</div>
-		<div id="div3">
-			
+		<div id="div3">				
+			<span class="section_header">Our Projects</span>
+			<div id="projects">
+				<div class="project">
+					<div class="project-image"></div>
+					<div class="project-name">Project Name Goes here</div>
+					<div class="project-description">Project Description Goes here</div>
+				</div>
+				<div class="project">
+					<div class="project-image"></div>
+					<div class="project-name">Project Name Goes here</div>
+					<div class="project-description">Project Description Goes here</div>
+				</div>
+				<div class="project">
+					<div class="project-image"></div>
+					<div class="project-name">Project Name Goes here</div>
+					<div class="project-description">Project Description Goes here</div>
+				</div>
+			</div>
+		</div>
+		<div id="div4">
+			<div class="testimonial">
+				<img src="media/logo.png" class="testimonial-image">
+				<img src="media/stars.png" class="testimonial-stars">
+				<div>This is a dummy testimonial. Needs to a bit long so I am adding random words. Here there also again never november again sunday then saturday I hate not hating anyone.</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="address">
+				Building XX<br>
+				Street XX<br>
+				State XX Pin XX<br>
+				98645XXXXX<br>
+				contact@xx.in
+			</div>
+			<div id="social-links">
+				<img class="social-icon" src="media/fb.png" onclick="openFb()">
+				<img class="social-icon" src="media/twitter.png" onclick="openTwitter()">
+				<img class="social-icon" src="media/instagram.png" onclick="openInsta()">
+				<img class="social-icon" src="media/youtube.png" onclick="openYoutube()">
+				<img class="social-icon" src="media/linkedin.png" onclick="openLinkedin()">
+			</div>
+			<div id="services">
+				Privacy Policy<br>
+				Terms and Conditions<br>
+				Career<br>
+				Sitemap
+			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript" src="scripts/main.js"></script>
 
 	<script type="text/javascript">
-		particlesJS.load('layer2', 'particle/particles.json', function() {
+		particlesJS.load('layer1', 'particle/particles.json', function() {
   			console.log('callback - particles.js config loaded');
 		});
 	</script>
