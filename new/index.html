@@ -59,6 +59,12 @@
 				<div id="msg-bio"></div>
 			</div>
 
+			<div id="screen-2">
+				<div id="screen-2-content"></div>
+				<div id="prev"></div>
+				<div id="curr"></div>
+				<div id="next"></div>
+			</div>
 
 			<div id="screen-cover"></div>
 		</div>
@@ -119,11 +125,11 @@
 
 	#screen{
 		width: 23vh;
+		height: 42vh;
 		background-color: #fff;
 		position: absolute;
 		top: 3vh;
 		left: 1vh;
-		height: 42vh;
 	}
 
 	#main.on #screen{
@@ -363,7 +369,9 @@
 	}
 
 	#bg-bio.activated:hover{
-		background-color: #aaa;
+		background-color: #eee;
+		transform: translate(2px, -2px);
+		box-shadow: -2px 2px 2px #ccc;
 	}
 
 	#button{
@@ -379,10 +387,63 @@
 
 	#button.virgin:hover{
 		transform: translate(1px, -1px);
-		box-shadow: -2px 2px 1px #ccc;
+		box-shadow: -2px 2px 2px #ccc;
 	}
 
+	#screen-2{
+		transition: all linear 0.3s;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		overflow: hidden;
+		height: 100%;
+		background-color: #fff;
+	}
 
+	#screen-2.show{
+		width: 100%;
+	}
+
+	#screen-2-content{
+		width: calc(100% - 2vh);
+		position: relative;
+		top: 1vh;
+		left: 1vh;
+		height: calc(100% - 7vh);
+		background-color: #eee;
+		background-image: url('./io_tecno.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: all linear 0.2s;
+	}
+
+	#prev, #curr, #next{		
+		width: 4vh;
+		height: 4vh;
+		position: absolute;
+		bottom: 1vh;
+		border-radius: 50%;
+	}
+
+	#prev{
+		background-color: #eee;
+		left: 50%;
+		transform: translateX(calc(-150% - 1vh));
+	}
+
+	#curr{
+		background-color: #ddd;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	#next{
+		background-color: #eee;
+		left: 50%;
+		transform: translateX(calc(50% + 1vh));
+	}	
 
 	@media (orientation: portrait){
 		#main{
@@ -506,10 +567,16 @@
 	var bgBio = document.getElementById('bg-bio');
 	var msgBio = document.getElementById('msg-bio');
 
+	var screen2 = document.getElementById('screen-2')
+
 	homeButton.addEventListener('click', function(){
-		state = 1;
-		main.className = "on";
-		homeButton.className = "";
+		if(state==0){
+			state = 1;
+			main.className = "on";
+			homeButton.className = "";	
+		}else{
+			screen2.className = "";
+		}
 	})
 
 	bgProfile.addEventListener('click', function(){
@@ -558,6 +625,29 @@
 
 	bgExperience.addEventListener('mouseleave', function(){
 		msgExperience.className="";
+	})
+
+	bgBio.addEventListener('click', function(){
+		if(bgBio.className=="activated"){
+			screen2.className="show";
+		}
+	})
+
+	var imageNames = ["io_tecno.png", "io_incand.png"];
+	var imageIndex = 0;
+
+	var next = document.getElementById('next');
+	var prev = document.getElementById('prev');
+	var screen2content = document.getElementById('screen-2-content');
+
+	next.addEventListener('click', function(){
+		imageIndex = (++imageIndex)%imageNames.length;
+		screen2content.style.backgroundImage = "url('" + imageNames[imageIndex] + "')";
+	})
+
+	prev.addEventListener('click', function(){
+		imageIndex = (imageNames.length+(--imageIndex))%imageNames.length;
+		screen2content.style.backgroundImage = "url('" + imageNames[imageIndex] + "')";
 	})
 
 </script>
