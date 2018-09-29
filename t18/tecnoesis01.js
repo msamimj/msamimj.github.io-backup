@@ -17,8 +17,8 @@ var homebutton = document.getElementById('btn-home');
 var introtext = document.getElementById('intro-text');
 var btnmodulemenu = document.getElementById('btn-module-menu');
 
-console.log(document.documentElement.clientHeight);
-console.log(window.innerHeight);
+alert(document.documentElement.clientHeight);
+alert(window.innerHeight);
 
 setTimeout(function(){
 	art.className = "loaded"
