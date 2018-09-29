@@ -8,10 +8,16 @@
 	src: url(assets/sunspire.ttf);
 }
 
+@font-face{
+	font-family: 'trans';
+	src: url(assets/trans.ttf);
+}
+
 
 body{
 	height: 100vh;
 	width: 100vw;
+	position: fixed;
 	margin: 0;
 	overflow: hidden;
 	background-color: #652C90;
@@ -80,7 +86,7 @@ body{
 	    left: 0;
 	    width: 100%;
 	    text-align: center;
-	    font-size: 1em;
+	    font-size: 4vw;
 	}
 
 	#intro-text>span{
@@ -3088,16 +3094,16 @@ body.schoolgenius #art>div{
 
 	#heading.home{
 		top: 38vh;
-		right: 0;
+		right: 50vw;
 		font-size: 12vw;
-		width: 100%;
-		text-align: center;
-		transform: translateX(0);
+		transform: translateX(50%);
 	}
 
 	#heading.top{
 		top: 5vw;
-		left: calc(100% - 5vw);
+		right: 5vw;
+		font-size: 5vw;
+		transform: translateX(0);
 	}
 }
 
@@ -9056,24 +9062,24 @@ body.schoolgenius #art>div{
 
 @media (orientation: portrait){
 
-	#btn-module-menu.close{
-		width: 15vw;
-		height: 15vw;
-		background-color: #ffffff40;
+	#btn-module-menu{
+		width: 13vw;
+		height: 13vw;
 		position: fixed;
-		top: 17vw;
-		right: 7vw;
+		top: 15vw;
+		right: 5vw;
 		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	#btn-module-menu.close{
+		background: url(./assets/btn-close.svg);
+		background-size: 100%;
 	}
 
 	#btn-module-menu.open{
-		width: 15vw;
-		height: 15vw;
-		background-color: #ffffff90;
-		position: fixed;
-		top: 17vw;
-		right: 7vw;
-		border-radius: 50%;
+		background: url(./assets/btn-menu.svg);
+		background-size: 100%;
 	}
 }
 
@@ -10024,6 +10030,13 @@ body.schoolgenius #art>div{
 	transition: all ease 1s;
 }
 
+@media (orientation: portrait){
+
+	#modulename{
+		font-size: 8vw;
+	}
+}
+
 #info{
 	background-color: #00000030;
 	color: white;
@@ -10075,6 +10088,49 @@ body.schoolgenius #art>div{
 }
 
 
+@media(orientation: portrait){
+
+	#modulename{
+		/*position: relative;*/
+	}
+
+	#modulename>span{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+	}
+
+	#modulename>#arrows{
+		position: absolute;
+		top: 23vw;
+		width: 100%;
+		left: 0;
+	}
+
+	#modulename #leftarrow, #modulename #rightarrow{
+		width: 13vw;
+		height: 13vw;
+	}
+
+	#modulename>#info{
+		position: absolute;
+		top: 22vw;
+		left: 25%;
+		width: 50%;
+		font-size: 5vw;
+		background: none;
+		opacity: 0.4;
+		font-weight: bold;
+		transition: opacity ease 0.5s;
+	}
+
+	#modulename>#info:hover{
+		opacity: 1;
+	}
+}
+
 
 
 
@@ -10120,6 +10176,9 @@ body.schoolgenius #art>div{
 	text-align: center;
 	color: white;
 	margin-top: 100px;
+	font-family: trans;
+	font-weight: normal;
+	letter-spacing: 0.05em;
 }
 
 #text>div>h1:first-child{
@@ -10131,6 +10190,11 @@ body.schoolgenius #art>div{
 	font-family: century;
 	letter-spacing: .06em;
 	font-size: 0.9em;
+	color: #fff;
+}
+
+#text>div ul{
+	color: #fff;
 }
 
 #text>div>h3{
@@ -10143,8 +10207,16 @@ body.schoolgenius #art>div{
 
 @media (orientation: portrait){
 
+	#text{
+		font-size: 3.8vw;
+	}
+
+	#text.display{
+		height: calc(100vh - 20vw);
+	}
+
  	#text>div{
-		margin: 100px 20px 20px 20px;
+		margin: 20px;
 		color: #f9ed53;
 		text-align: justify;
 		font-family: century;
@@ -10166,6 +10238,15 @@ body.schoolgenius #art>div{
 	transition: all ease 5s;
 	display: none;
 	cursor: pointer;
+}
+
+@media(orientation: portrait){
+	#closebtn{
+		top: 5vw;
+		left: 5vw;
+		width: 13vw;
+		height: 13vw;
+	}
 }
 
 
