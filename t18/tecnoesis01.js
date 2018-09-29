@@ -17,6 +17,12 @@ var homebutton = document.getElementById('btn-home');
 var introtext = document.getElementById('intro-text');
 var btnmodulemenu = document.getElementById('btn-module-menu');
 
+window.onload = scrollOne;
+
+function scrollOne(){
+	window.scroll(0, 2);
+}
+
 setTimeout(function(){
 	art.className = "loaded"
 	for(var i=0; i<24; i++){
