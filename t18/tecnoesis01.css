@@ -128,30 +128,34 @@ body.gaming{
 }
 body.conferanza{
 	transition: all ease 1.5s;
-	background: #ffe9a1;
+	background: #59d898;
 }
 
 body.empressario{
 	transition: all ease 1.5s;
-	background: #bbe6ce;
+	background: #9da7a1;
 }
 
 body.brain{
-	background-color: #88ffe0;
+	background-color: #2ed4da;
 }
 
 body.asme{
-	background: #b1ffb7;
+	background: #72dc79;
 }
 body.smartcity{
-	background: #9ef2f7;
+	background: #92a1a9;
 }
 body.smartcity #art{
-	left: 45% !important;
+	left: 48% !important;
 }
 
 body.schoolgenius{
-	background-color: #f1c9ee;
+	background-color: #dea0d9;
+}
+
+body.schoolgenius #art{
+	left: 48% !important;
 }
 
 body.schoolgenius #art>div{
