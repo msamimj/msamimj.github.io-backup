@@ -17,11 +17,8 @@ var homebutton = document.getElementById('btn-home');
 var introtext = document.getElementById('intro-text');
 var btnmodulemenu = document.getElementById('btn-module-menu');
 
-window.onload = scrollOne;
-
-function scrollOne(){
-	window.scroll(0, 2);
-}
+console.log(document.documentElement.clientHeight);
+console.log(window.innerHeight);
 
 setTimeout(function(){
 	art.className = "loaded"
