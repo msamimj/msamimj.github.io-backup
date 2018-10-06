@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Tecnoesis'17</title>
+
+  <script src="js/aframe.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/a-animations.js"></script>
+
+  <!-- favicon -->
+  <link rel="icon" href="images/Tecnoesis/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+     <a-asset-item id="Nits" src="models/low-scene-nits.dae"></a-asset-item>
+     <a-asset-item id="floatingbanner" src="models/floatingbanner.dae"></a-asset-item>
+     <a-asset-item id="groundbanner" src="models/groundbanner.dae"></a-asset-item>      
+
+     <img id="spark2015" src="images/Spark/spark2015.jpg">
+     <img id="tourNits" src="images/library.png">
+
+     <img id="cloud2" src="images/Clouds/cloud2.png">
+     <img id="cloud3" src="images/Clouds/cloud3.png">
+     <img id="cloud4" src="images/Clouds/cloud4.png">
+
+     <img id="my-image1" src="images/Modules/amazers.png">
+     <img id="my-image2" src="images/Modules/robotron.png">
+     <img id="my-image12" src="images/Modules/myndsnare.png">
+     <img id="my-image4" src="images/Modules/smartcity.png">
+     <img id="my-image5" src="images/Modules/schoolgenius.png">
+     <img id="my-image6" src="images/Modules/showcase.png">
+     <img id="my-image7" src="images/Modules/workshop.png">
+     <img id="my-image8" src="images/Modules/conferenza.png">
+     <img id="my-image9" src="images/Modules/cyberwarp.png">
+     <img id="my-image10" src="images/Modules/initiative.png">
+     <img id="my-image11" src="images/Modules/techzenith.png">
+     <img id="my-image3" src="images/Modules/up.png">
+
+     <img id="tagline" src="images/Tecnoesis/tread.png">
+
+     <img id="floor" src="images/floor.jpg">
+     <img id="instruction" src="images/instruction.jpg">
+
+     <a-asset-item id="tecnoesis-text-obj" src="models/tec.obj"></a-asset-item>
+     <a-asset-item id="tecnoesis-text-mat" src="models/tec.mtl"></a-asset-item>         
+   </a-assets>
+
+   <a-entity obj-model="obj: #tecnoesis-text-obj; mtl: #tecnoesis-text-mat" position="-3.7 0.2 -4.3" scale=".05 .05 .05">
+    <a-animation attribute="position" from="-3.7 0.2 -4.3" to="-3.7 -0.2 -4.3" repeat="indefinite" direction="alternate" dur="2000"></a-animation>
+  </a-entity>
+
+  <a-entity>
+   <a-image src="#cloud3" opacity="1" height="3" width="6" position="6 0 -6" scale="1.5 1.5 1.5" rotation="0 0 0"></a-image>
+   <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="100000"></a-animation>
+ </a-entity>
+
+ <a-entity>
+   <a-image src="#cloud2" opacity=".8" height="3" width="8" position="-2 5 -8" scale="1.5 1.5 1.5" rotation="0 0 0"></a-image>
+   <a-image src="#cloud4" opacity="1" height="3" width="8" position="0 3 7" scale="1.5 1.5 1.5" rotation="0 0 0"></a-image>	      
+   <a-animation attribute="rotation" to="0 -360 0" repeat="indefinite" dur="100000"></a-animation>
+ </a-entity>
+
+ <a-image src="#cloud3" opacity="1" height="3" width="6" position="1 0 5.2" scale="1.5 1.5 1.5" rotation="0 0 0"></a-image>
+
+ <a-image src="#tourNits" height="2" width="3.5" position="5 2 0" scale="1.5 1.5 1.5" rotation="0 -90 0"></a-image>
+
+ <a-box id="tourButton" position="3 1 0" src="images/Cube/click.png" rotation="0 180 0" height=".5" width="0.5" depth=".5" onclick="loadModel()">
+   <a-animation attribute="scale" begin="mouseenter" to="1.5 1.5 1.5"></a-animation>
+   <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+ </a-box>
+
+ <a-image id="spark" src="#spark2015" height="2" width="4" rotation="0 180 0" position="0 2 5"  scale="1.5 1.5 1.5"></a-image>
+
+ <a-box id="SparkButton" position="0 1 3" src="images/Cube/click.png" rotation="0 180 0" height=".5" width="0.5" depth="0.5" onclick="sparkLoad()">
+   <a-animation attribute="scale" begin="mouseenter" from="1 1 1" to="1.5 1.5 1.5"></a-animation>
+   <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+ </a-box>
+
+ <a-box id="boxModules" position="-6 3 -1" src="images/Cube/modules.jpg" height="1.5" width="0.5" depth="1.5" onclick="changeViewModules()">
+  <a-animation attribute="position" repeat="indefinite" direction="alternate" from="-6 3 -1" to="-6 3.1 -1" begin=""></a-animation>
+</a-box>
+
+<a-box id="boxInfoMode" position="-6 3 1" src="images/Cube/infomode.jpg" height="1.5" width="0.5" depth="1.5" onclick="informativeLoad()">
+  <a-animation attribute="position" repeat="indefinite" direction="alternate" from="-6 3 1" to="-6 2.9 1"></a-animation>
+</a-box>
+
+<a-box id="boxContact" position="-6 1 1" src="images/Cube/contactus.jpg" height="1.5" width="0.5" depth="1.5" onclick="contactLoad()">
+  <a-animation attribute="position" repeat="indefinite" direction="alternate" from="-6 1 -1" to="-6 0.9 -1"></a-animation>
+</a-box>
+
+<a-box id="boxTeam" position="-6 1 1" src="images/Cube/team.jpg" height="1.5" width="0.5" depth="1.5" onclick="teamLoad()">
+  <a-animation attribute="position" repeat="indefinite" direction="alternate" from="-6 1 1" to="-6 1.1 1"></a-animation>
+</a-box>
+
+<a-sky id="sky" src="images/Background/mountains.png" rotation="0 190 0" radius="10000"></a-sky>
+
+<!-- #############-end of Home -###############-->
+<!-- completely developed by the web development team of tecnoesis nit silchar-->
+<!-- #############-Modules-###############-->
+
+
+
+<a-image src="#my-image1" height="2.4" width="2.4" rotation="0 270 0" scale="1 1 1" position="6.6 -1015 0" onclick="loadAmazers()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation> 
+</a-image>
+
+<a-image src="#my-image2" height="2.4" width="2.4" rotation="0 210 0" scale="1 1 1" position="3.3 -1015 5.715" onclick="loadRobotron()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image3" height="2.4" width="2.4" rotation="0 240 0" scale="1 1 1" position="5.715 -1015 3.3" onclick="changeViewHome2()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image4" height="2.4" width="2.4" rotation="0 180 0" scale="1 1 1" position="0 -1015 6.6" onclick="loadSmartCity()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image5" height="2.4" width="2.4" rotation="0 -60 0" scale="1 1 1" position="5.715 -1015 -3.3" onclick="loadSchoolGenius()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image6" height="2.4" width="2.4" rotation="0 150 0" scale="1 1 1" position="-3.3 -1015 5.715" onclick="loadShowcase()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image7" height="2.4" width="2.4" rotation="0 90 0" scale="1 1 1" position="-6.6 -1015 0" onclick="loadWorkshop()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image8" height="2.4" width="2.4" rotation="0 30 0" scale="1 1 1" position="-3.3 -1015 -5.715" onclick="loadConferenza()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image9" height="2.4" width="2.4" rotation="0 60 0" scale="1 1 1" position="-5.715 -1015 -3.3" onclick="loadCyberwarp()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image10" height="2.4" width="2.4" rotation="0 0 0" scale="1 1 1" position="0 -1015 -6.6" onclick="loadInitiative()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image11" height="2.4" width="2.4" rotation="0 -30 0" scale="1 1 1" position="3.3 -1015 -5.715" onclick="loadTechzenith()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+<a-image src="#my-image12" height="2.4" width="2.4" rotation="0 120 0" scale="1 1 1" position="-5.715 -1015 3.3" onclick="loadMyndSnare()">
+ <a-animation attribute="scale" begin="mouseenter" end="mouseleave" to="1.3 1.3 1.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" to="1 1 1"></a-animation>
+</a-image>
+
+
+
+
+
+
+<a-circle color="#0a0a0c" rotation="-90 0 0" position="0 -1016.6 0" radius="60">
+ <a-animation attribute="rotation" dur="20000" easing="linear" from="-90 0 0" to="-90 360 0" repeat="indefinite"></a-animation>
+</a-circle>
+
+<!-- #############-end of Modules ###############-->
+
+<!-- ############# Model ###############-->
+
+<a-entity id="model" collada-model="#Nits" position="0 1000 0">
+  <a-animation attribute="rotation" begin="startRotation" end="stopRotation" repeat="indefinite" from="0 0 0" to="0 360 0" dur="30000"></a-animation>
+  <a-animation attribute="rotation" begin="stopFlying" to="0 0 0" dur="2000"></a-animation>
+</a-entity>
+
+<a-entity id="floatingBannerEntity" collada-model="#floatingbanner" position="-2 1002 0" scale="0.3 0.3 0.3" onclick="openVrHome()">
+ <a-animation attribute="position" repeat="indefinite" direction="alternate" from="-2 1002 0" to="-2 1002.05 0"></a-animation>
+</a-entity>
+
+<a-box id="boxAerial" position="-1 1001.5 0" src="images/ViewPoints/viewAerial.png" onclick="changeViewAreial()" height=".6" depth=".6" width=".6"></a-box>
+<a-box id="boxBase" position="-1 1006 -8" src="images/ViewPoints/viewGround.png" onclick="changeViewBase()" height=".6" depth=".6" width=".6"></a-box>
+<a-box id="boxLibrary" position="-3 1001.5 0" src="images/ViewPoints/viewLibrary.png" onclick="changeViewLibrary()" height=".6" depth=".6" width=".6"></a-box>
+<a-box id="boxGallery" position="-3 1001.5 2" src="images/ViewPoints/viewGallery.png" onclick="changeViewGallery()" height=".6" depth=".6" width=".6"></a-box>
+<a-box id="boxHome" position="1 1001.5 -4" src="images/ViewPoints/viewHome.png" onclick="changeViewHome()" height=".6" depth=".6" width=".6"></a-box>
+
+<a-entity id="groundBannerEntity" collada-model="#groundbanner" position="0 1001.5 1" rotation="0 180 0" scale="0.4 0.4 0.4"></a-entity>
+<a-image src="#eventsPic" height="5" width="4" scale=".2 .1 .3" position="0.25 1001.5 2.6" rotation="0 90 0"></a-image>
+
+<a-image id="instructionImage" src="#instruction" height="5" width="8" scale="1 1 1" position="0 1010 -55" rotation="0 180 0"></a-image>
+<a-box id="instructionBox" src="images/ViewPoints/viewExplore.png" height="1" width="1" depth="1" position="0 1006.5 -55" rotation="15 0 0" onclick="landModel()"></a-box>
+
+<!-- #############-end of Models -###############-->
+
+
+
+
+<!-- Camera controls and Animation -->
+<a-camera id="view" wasd-controls-enabled="false" position="0 0 0">
+
+  <a-animation attribute="position" begin="loadModules" to="0 -1000 0" dur="2000"></a-animation>
+  <a-animation attribute="rotation" begin="loadModules" to="-90 -90 0" dur="2000"></a-animation>
+  <a-animation attribute="position" begin="loadModules" from="0 -1000 0" to="0 -1015 0" dur="1500" delay="2000"></a-animation>
+  <a-animation attribute="rotation" begin="loadModules" from="-90 -90 0" to="0 -90 0" dur="1000" delay="2500"></a-animation>
+
+  <a-animation attribute="position" begin="backToHome2" from="0 -1015 0" to="0 1 0" dur="1000"></a-animation>
+  <a-animation attribute="rotation" begin="backToHome2" to="0 0 0" dur="1000"></a-animation>
+
+  <a-animation attribute="position" begin="backToHome" to="-0.5 1.5 0.7" dur="1000"></a-animation>
+  <a-animation attribute="rotation" begin="backToHome" to="0 0 0" dur="1000"></a-animation>
+
+  <a-animation attribute="position" begin="loadModel" to="0 1010 -60" dur="1000"></a-animation>
+  <a-animation attribute="rotation" begin="loadModel" to="0 180 0" dur="1000"></a-animation>
+
+  <a-animation attribute="position" begin="landModel" to="-1 1001.5 -6" dur="3000"></a-animation>
+  <a-animation attribute="rotation" begin="landModel" to="0 180 0" dur="1000"></a-animation>
+
+  <a-animation attribute="position" begin="startMovingToLibrary" to="-1 1001.5 6" dur="4000"></a-animation>
+  <a-animation attribute="rotation" begin="startMovingToLibrary" delay="1000" to="0 0 0" dur="2500"></a-animation>
+
+  <a-animation attribute="position" begin="startMovingToGallery" to="-1 1001.5 -6" dur="4000"></a-animation>
+  <a-animation attribute="rotation" begin="startMovingToGallery" delay="1000" to="0 -180 0" dur="2500"></a-animation>
+
+  <a-animation attribute="position" begin="startFlying" to="-1 1006 -15" dur="4000"></a-animation>
+  <a-animation attribute="rotation" begin="startFlying" to="-20 180 0" dur="1000"></a-animation>
+
+  <a-animation attribute="position" begin="stopFlying" to="-1 1001.5 -6" dur="3000"></a-animation>
+  <a-animation attribute="rotation" begin="stopFlying" to="0 180 0" dur="3000"></a-animation>
+
+  <a-cursor color="black"/>
+</a-camera>
+
+</a-scene>
+
+<div class="row fade1 hidden-sm hidden-xs" style="position:fixed;left:2em;bottom:5px;z-index:2">
+  <a target="_blank" class="social-icons" href="https://www.facebook.com/tecnoesis.nits/"><img class="social-img" width="40px" height="40px" src="images/social/facebook.bb1a871f.png"></a> 
+  <a target="_blank" class="social-icons" href="https://twitter.com/tecnoesis2016/"><img class="social-img" width="40px" height="40px" src="images/social/twitter.775fd410.png"></a> 
+  <a target="_blank" class="social-icons" href="https://www.instagram.com/tecnoesis2016/"><img class="social-img" width="40px" height="40px" src="images/social/instagram.db9a53e2.png"></a> 
+  <a target="_blank" class="social-icons" href="https://www.youtube.com/channel/UCVV52JDnldc5GoHPYXMXDdg"><img class="social-img" width="40px" height="40px" src="images/social/youtube.53ff03a6.png"></a> 
+  <a target="_blank" class="social-icons" href="#"><img class="social-img" width="40px" height="40px" src="images/social/info.png"></a> 
+
+  <!-- <span class="date" style="position: relative;top:0.3em;text-shadow:0px 0px 5px #888888">27<sup>th</sup> - 30<sup>th</sup> OCTOBER 2017</span>  -->
+</div> 
+
+</body>
+</html>
