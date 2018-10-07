@@ -1,10 +1,43 @@
 <html>
 <head>
-  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal VR Headset | A-Frame Scene</title>
+  <script src="../libs/aframe.min.js"></script>
+
 </head>
+
 <body>
 
-  <a-scene>
+  <div id="source-link">&lt;Source&gt;</div>
+
+  <style type="text/css">
+
+    #source-link{
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      z-index: 1000;
+      font-family: sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: all ease 0.5s;
+    }
+
+    #source-link:hover{
+      opacity: 1;
+    }
+  </style>
+
+  <script type="text/javascript">
+    document.getElementById('source-link').addEventListener('click', function(){
+      window.open("https://github.com/msamimj/AFrame-MinimalVRHeadset-Scene");
+    })
+  </script>
+
+  <a-scene style="z-index: 900">
 
       <a-entity id="vr-glass" position="0 0.8 -2.5" rotation="0 45 0">
 
