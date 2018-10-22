@@ -1,85 +1,296 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Incandescence'18 - Coming Soon!</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    </head>
-    <body>
-        <div id="page1"> <!-- start of page 1 -->
-            <div id="container"> <!-- start 0f tape player -->
-                <div id="c0" class="component"></div>
-                <div id="c1" class="component button-top"></div>
-                <div id="c2" class="component button-top"></div>
-                <div id="c3" class="component button-top"></div>
-                <div id="c4" class="component button-top"></div>
-                <div id="c5" class="component button-top"></div>
-                <div id="c6" class="component"></div>
-                <div id="c7" class="component"></div>
-                <div id="c8" class="component"></div>
-                <div id="c9" class="component"></div>
-                <div id="c10" class="component"></div>
-                <div id="c11" class="component"></div>
-                <div id="c12" class="component"></div>
-                <div id="c13" class="component"></div>
-                <div id="c14" class="component"></div>
-                <div id="c15" class="component"></div>
-                <div id="c16" class="component"></div>
-                <div id="c17" class="component"></div>
-                <div id="c18" class="component"></div>
-                <div id="c19" class="component"></div>
-                <div id="c20" class="component"></div>
-                <div id="c21" class="component"></div>
-                <div id="c22" class="component"></div>
-                <div id="c23" class="component"></div>
-                <div id="c24" class="component"></div>
-            </div> <!-- end of tape player -->
-            <img src="images/incand.svg" id="incand"> <!-- incandescence text -->
-            <img src="images/coming.svg" id="coming"> <!-- coming soon text -->
-            <div id="btn-down"></div>
-        </div> <!-- endo of page 1 -->
-        <div id="page1.5" style="height: 2px;"></div>
-        <div id="page2">
-        	<img src="images/bg-small.png" style="position: absolute; right: 0; bottom: 0; z-index: 105; opacity: 0.7">
-        	<img src="images/bg-smaller.png" style="position: absolute; left: 0; top: 0; z-index: 105; opacity: 0.7">
-            <div id="page2-content" style="text-align: justify">
-                <p style="font-size: 1.1em; padding: 0 2em; border-right: 3px solid #d16560; border-left: 3px solid #d16560">
-                    The Grandest and The Biggest cultural fest of The North East is back. That’s right ! Incandescence'18 - The annual cultural fest of National Institute of Technology, Silchar is here. And this year our repertoire is jam packed with exciting events offering incredible prizes to get the sheer adrenaline running. Because this time, Its Lit !
-                </p>
-                <img src="images/theme.svg" style="height: 2em; padding-top: 2em;">
-                <p style="padding-left: 2em">
-                	With the theme <b style="color: #d16560">THE 90's CHILDREN</b> and the perfect amalgamation of events INCANDESCENCE 2018 will be an unforgettable experience. Because we’re the 90’s Kid, and there is something for everyone !
-            	</p>
-                <img src="images/beat.svg" style="height: 2em; padding-top: 2em;">
-                <ul style="list-style-image: url(images/listred.svg);">
-                    <li>It is a platform which celebrates a diversified culture of talent showcased in the form of entertainment.</li>
-                    <!-- <li>For the people who don’t need a reason to dance, we give you a reason here.</li> -->
-                    <li>The amazing décor and the orchestra of nature’s glory will intoxicate you to a whole new level of serenity.</li>
-                    <!-- <li>We believe a meek smile can erode all your woes away and Incandescence is our own smile spreading Genie.</li> -->
-                    <li>It is a perfect opportunity to rekindle your thirst for knowledge through expansive discussion, brainstorms, debates and quizzes.</li>
-                    <!-- <li>You are sure to walk through a boulevard between melody, joviality and harmony.</li> -->
-                    <li>There are innumerous opportunities to earn some good bucks by doing what you love.</li>
-                    <li>A nostalgic feeling will get to you when you see your favourite childhood artists in front of you.</li>
-                    <li>What's better at reminding you of the time you were a kid craving for candies than your entire childhood of the 90's.</li>
-                    <!-- <li>You tend to come across so many old friends just roaming or on the stage or in an auto passing by, awaiting all those “I missed you” selfie sessions to start.</li> -->
-                </ul>
-                <div onclick="window.open('brochure.pdf')" style="cursor: pointer; color: #14679b; font-size: 1.2em; font-weight: bold"> Download Brochure</div>
-            </div>
-            <div id="footer" style="position: relative;">
-                &copy; 2017 | Incandescene, NIT Silchar
-                <div style="display: inline-block; position: absolute; right: 0">
-                	<a onclick="window.open('./brochure.pdf')"><img style="width:40px; margin-top: -10px; z-index: 110; position: relative; cursor: pointer;" src="images/pdf.svg" /></a>
-                	<a onclick="window.open('https://www.facebook.com/incandescencenit/')"><img style="width:40px; margin-top: -10px; z-index: 110; position: relative; cursor: pointer;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDExMi4xOTYgMTEyLjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NiAxMTIuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMzQjU5OTg7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNNzAuMjAxLDU4LjI5NGgtMTAuMDF2MzYuNjcySDQ1LjAyNVY1OC4yOTRoLTcuMjEzVjQ1LjQwNmg3LjIxM3YtOC4zNCAgIGMwLTUuOTY0LDIuODMzLTE1LjMwMywxNS4zMDEtMTUuMzAzTDcxLjU2LDIxLjgxdjEyLjUxaC04LjE1MWMtMS4zMzcsMC0zLjIxNywwLjY2OC0zLjIxNywzLjUxM3Y3LjU4NWgxMS4zMzRMNzAuMjAxLDU4LjI5NHoiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" /></a>
-                	<a onclick="window.open('http://twitter.com/IncandNITS')"><img style="width:40px; margin-top: -10px; z-index: 110; position: relative; cursor: pointer;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDExMi4xOTcgMTEyLjE5NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NyAxMTIuMTk3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiM1NUFDRUU7IiBjeD0iNTYuMDk5IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiLz4KCTxnPgoJCTxwYXRoIHN0eWxlPSJmaWxsOiNGMUYyRjI7IiBkPSJNOTAuNDYxLDQwLjMxNmMtMi40MDQsMS4wNjYtNC45OSwxLjc4Ny03LjcwMiwyLjEwOWMyLjc2OS0xLjY1OSw0Ljg5NC00LjI4NCw1Ljg5Ny03LjQxNyAgICBjLTIuNTkxLDEuNTM3LTUuNDYyLDIuNjUyLTguNTE1LDMuMjUzYy0yLjQ0Ni0yLjYwNS01LjkzMS00LjIzMy05Ljc5LTQuMjMzYy03LjQwNCwwLTEzLjQwOSw2LjAwNS0xMy40MDksMTMuNDA5ICAgIGMwLDEuMDUxLDAuMTE5LDIuMDc0LDAuMzQ5LDMuMDU2Yy0xMS4xNDQtMC41NTktMjEuMDI1LTUuODk3LTI3LjYzOS0xNC4wMTJjLTEuMTU0LDEuOTgtMS44MTYsNC4yODUtMS44MTYsNi43NDIgICAgYzAsNC42NTEsMi4zNjksOC43NTcsNS45NjUsMTEuMTYxYy0yLjE5Ny0wLjA2OS00LjI2Ni0wLjY3Mi02LjA3My0xLjY3OWMtMC4wMDEsMC4wNTctMC4wMDEsMC4xMTQtMC4wMDEsMC4xNyAgICBjMCw2LjQ5Nyw0LjYyNCwxMS45MTYsMTAuNzU3LDEzLjE0N2MtMS4xMjQsMC4zMDgtMi4zMTEsMC40NzEtMy41MzIsMC40NzFjLTAuODY2LDAtMS43MDUtMC4wODMtMi41MjMtMC4yMzkgICAgYzEuNzA2LDUuMzI2LDYuNjU3LDkuMjAzLDEyLjUyNiw5LjMxMmMtNC41OSwzLjU5Ny0xMC4zNzEsNS43NC0xNi42NTUsNS43NGMtMS4wOCwwLTIuMTUtMC4wNjMtMy4xOTctMC4xODggICAgYzUuOTMxLDMuODA2LDEyLjk4MSw2LjAyNSwyMC41NTMsNi4wMjVjMjQuNjY0LDAsMzguMTUyLTIwLjQzMiwzOC4xNTItMzguMTUzYzAtMC41ODEtMC4wMTMtMS4xNi0wLjAzOS0xLjczNCAgICBDODYuMzkxLDQ1LjM2Niw4OC42NjQsNDMuMDA1LDkwLjQ2MSw0MC4zMTZMOTAuNDYxLDQwLjMxNnoiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" /></a>
-                	<a onclick="window.open('https://www.instagram.com/explore/locations/142591775891783/incandescence-nit-silchar/')"><img style="width:40px; margin-top: -10px; z-index: 110; position: relative; cursor: pointer;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA4OS43NTggODkuNzU4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA4OS43NTggODkuNzU4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNkE0NTNCOyIgZD0iTTU4LjI1NSwyMy44OEgzMS41MDNjLTQuMjcsMC03Ljc0NCwzLjQ3NC03Ljc0NCw3Ljc0NHYyNi43NTJjMCw0LjI3LDMuNDc0LDcuNzQ1LDcuNzQ0LDcuNzQ1ICAgaDI2Ljc1MmM0LjI3LDAsNy43NDUtMy40NzQsNy43NDUtNy43NDVWMzEuNjI0QzY2LDI3LjM1NCw2Mi41MjYsMjMuODgsNTguMjU1LDIzLjg4eiBNNDQuODc5LDU4LjkwNiAgIGMtNy42NjcsMC0xMy45MDUtNi4yMzgtMTMuOTA1LTEzLjkwNmMwLTcuNjY3LDYuMjM4LTEzLjkwNSwxMy45MDUtMTMuOTA1YzcuNjY4LDAsMTMuOTA2LDYuMjM4LDEzLjkwNiwxMy45MDUgICBDNTguNzg1LDUyLjY2Nyw1Mi41NDYsNTguOTA2LDQ0Ljg3OSw1OC45MDZ6IE01OS4yMzIsMzMuOTdjLTEuODE1LDAtMy4yOTEtMS40NzYtMy4yOTEtMy4yOWMwLTEuODE0LDEuNDc2LTMuMjksMy4yOTEtMy4yOSAgIGMxLjgxNCwwLDMuMjksMS40NzYsMy4yOSwzLjI5QzYyLjUyMiwzMi40OTQsNjEuMDQ2LDMzLjk3LDU5LjIzMiwzMy45N3oiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiM2QTQ1M0I7IiBkPSJNNDQuODc5LDM2Ljk3MWMtNC40MjYsMC04LjAzLDMuNjAyLTguMDMsOC4wMjhjMCw0LjQyOCwzLjYwNCw4LjAzMSw4LjAzLDguMDMxICAgYzQuNDI4LDAsOC4wMjktMy42MDMsOC4wMjktOC4wMzFDNTIuOTA4LDQwLjU3NCw0OS4zMDYsMzYuOTcxLDQ0Ljg3OSwzNi45NzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNkE0NTNCOyIgZD0iTTQ0Ljg3OSwwQzIwLjA5NCwwLDAsMjAuMDk0LDAsNDQuODc5YzAsMjQuNzg1LDIwLjA5NCw0NC44NzksNDQuODc5LDQ0Ljg3OSAgIGMyNC43ODUsMCw0NC44NzktMjAuMDk0LDQ0Ljg3OS00NC44NzlDODkuNzU4LDIwLjA5NCw2OS42NjQsMCw0NC44NzksMHogTTcxLjg3NSw1OC4zNzZjMCw3LjUxMS02LjEwOSwxMy42Mi0xMy42MiwxMy42MkgzMS41MDMgICBjLTcuNTEsMC0xMy42Mi02LjEwOS0xMy42Mi0xMy42MlYzMS42MjRjMC03LjUxLDYuMTEtMTMuNjIsMTMuNjItMTMuNjJoMjYuNzUyYzcuNTExLDAsMTMuNjIsNi4xMSwxMy42MiwxMy42MlY1OC4zNzZ6Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" /></a>
-                </div>
-            </div>
-        </div>
-        
-        <script type="text/javascript" src="libs/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="libs/TweenMax.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta property="og:image" content="media/thumb.png" />
+	<meta property="og:description" content="The Annual Cultural Festival of National Institute of Technology Silchar is back. One of its kind in the entire North-East. With an exciting range of events, we are set to take it to a whole new level this year." />
+	<title>Incandescence'18 - NIT Silchar</title>
+
+	<link rel="icon" type="image/png" href="media/icon.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/morph.css">
+</head>
+<body>
+
+	<audio loop id="bgmusic">
+		<source src="media/bgmusic.mp3" type="audio/mpeg">
+	</audio>
+
+	<div id="loader">
+
+		<img src="media/incandlogo2.png" style="position: absolute; right: 20px; top: 20px; max-width: 10vw">
+		<div style="position: absolute; left: 20px; top: 20px; width: calc(90vw - 2 * 20px - 5vw)">
+			<img src="media/spons.png" style="max-width: 100%; max-height: 50px" >
+		</div>
+		<a href='./sponsors.html' target="_blank" id="sponsorslink">View Sponsorship Details</a>
+
+		<div id="container">
+		    <div id="c0" class="component"></div>
+		    <div id="c1" class="component button-top"></div>
+		    <div id="c2" class="component button-top"></div>
+		    <div id="c3" class="component button-top"></div>
+		    <div id="c4" class="component button-top"></div>
+		    <div id="c5" class="component button-top"></div>
+		    <div id="c6" class="component"></div>
+		    <div id="c7" class="component"></div>
+		    <div id="c8" class="component"></div>
+		    <div id="c9" class="component"></div>
+		    <div id="c10" class="component"></div>
+		    <div id="c11" class="component"></div>
+		    <div id="c12" class="component"></div>
+		    <div id="c13" class="component"></div>
+		    <div id="c14" class="component"></div>
+		    <div id="c15" class="component"></div>
+		    <div id="c16" class="component"></div>
+		    <div id="c17" class="component"></div>
+		    <div id="c18" class="component"></div>
+		    <div id="c19" class="component"></div>
+		    <div id="c20" class="component"></div>
+		    <div id="c21" class="component"></div>
+		    <div id="c22" class="component"></div>
+		    <div id="c23" class="component"></div>
+		    <div id="c24" class="component"></div>
+		</div>
+
+		<div id="warning">
+			Use your computer for a better experience.
+		</div>
+
+		<div id="proceed" class="hidden"></div>
+		
+		<script type="text/javascript" src="js/TweenMax.min.js"></script>
+		
+	</div>
+
+	<div id="website">
+		<div id="left"></div>
+		<div id="right"></div>
+
+		<div id="fb" class="soc"></div>
+		<div id="insta" class="soc"></div>
+		<div id="youtube" class="soc"></div>
+		<div id="pdf" class="soc"></div>
+
+		<img src="media/bg1.svg" id="bg">
+
+		<div id="marquee">
+			<div id="marquee-content"></div>
+		</div>
+		<img src="media/bg2.svg" id="bg2">
+		<img src="media/bg3.svg" id="bg3">
+		<div id="box">
+			<img src="media/dex-right.svg" id="character">
+		</div>
+		<div id="inc"></div>
+		<img src="media/flask.gif" id="flask">
+		<img src="media/door1.png" id="door1">
+		<img src="media/door1side.svg" id="door1side">
+		<img src="media/fan1.png" id="fan1">
+		<img src="media/level.png" id="level1" class="level">
+		<img src="media/gate.png" id="gate">
+		<img src="media/gate-fence.png" id="gate-fence">
+
+		<img src="media/door1.png" id="door3">
+		<img src="media/door2side.svg" id="door3side">
+
+		<div id="carpe">
+			<div id="carpe-modal">
+				<div id="carpe-close"></div>
+				<div class="modal-content" id="carpe-content">
+					<p>What better to groove to than our very own beats? The biggest night of Incandescence, with all the
+						tadka and masala one could ask for, brings to you the ultimate joy of letting loose. Come join us in
+						celebrating the spirit of the festival as the biggest names in music and entertainment liven and light up
+						an atmosphere like nowhere else. Serving out number after number of your favorite jams, this night
+						promises to be one of a kind and nostalgic to every 90’s kid.
+					</p>
+					<p>
+						With big names such as Papon, Prateek Kuhad, The Local Train, Monali Thakur, Spunk, Nikhil D’Souza
+						and Zephyrtone gracing the stage, Carpe Diem indeed has a reputation for making the memories last.
+					</p>
+					<p>
+						Headliners: <a href="https://www.facebook.com/iVermaGajendra/" style="text-decoration: none; color: white; font-weight: bold;">Gajendra Verma</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="nirvana">
+			<div id="nirvana-modal">
+				<div id="nirvana-close"></div>
+				<div class="modal-content" id="nirvana-content">
+					<p>It ain't over till its over .  And hope  is a good thing. In the famous words of Rocky Balboa and Andy Dufrense , the fun must go on. And in that spirit , presenting before the 2nd Headliner Musical Night, NIRVANA
+					</p>
+					<p>
+						With an interesting set of events to engrope u including the fiesty Kavi sammelan and the hillarious Just For Laugh ! NITS . Get ready for an enthralling night of frolic.
+					</p>
+					<p>
+						Headliners: <br>
+						<a href="https://www.facebook.com/LifeOfPaaji/" style="text-decoration: none; color: white; font-weight: bold;">Jaspreet Singh</a> <br>
+						<a href="https://www.facebook.com/TheSkyGupta/" style="text-decoration: none; color: white; font-weight: bold;">Aakash Gupta</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="tm">
+			<div id="tm-modal">
+				<div id="tm-close"></div>
+				<div class="modal-content" id="tm-content">
+					<p>
+						Presenting before you, the gig of the year, lined with dreadlocked guitarists, bellowing vocalists,
+						and superhuman drummers from bands representing the scene in all its glory.
+					</p>
+					<p>
+						With well-known and grand acts such as Guthrie Govan, Parikrama, Underside, Undying.inc,
+						Third sovereign, Junkyard Groove among many in the recent years, this stage is known for its
+						explosiveness.
+					</p>
+					<p>
+						Come over to ThunderMarch, the biggest and the baddest. Stay High, Stay Brutal.
+					</p>
+					<p>
+						<a href="./thundermarch" style="text-decoration: none; color: white; font-weight: bold;">Visit the Thundermarch Website</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="glit">
+			<div id="glit-modal">
+				<div id="glit-close"></div>
+				<div class="modal-content" id="glit-content">
+					<p>Ever wanted to have a bite of ethnicity and artistry together!! Then what else can be better for you
+						than the most picturesque evening of NITS!!!! It is time our people adored the ramps with their cool
+						walks and unpolluted etiquettes and stole your heart away.Acclaimed designers like Poran Gogoi,
+						Ashish Agarwal, Birina Chakravarti, Kamal Lochan Borah, Prashant Ghosh had conflagrated the
+					stage.Friends, be ready again to treat yourself with the fiesta of conflated colours and grandeur.</p>
+				</div>
+			</div>
+		</div>
+
+		<img src="media/door1.png" id="door2">
+		<img src="media/door2side.svg" id="door2side">
+
+		<img src="media/level.png" id="level2" class="level">
+
+		<div id="modal-bg"></div>
+
+		<div id="o1">
+			<img src="media/obj1.svg" id="obj1">
+			<img src="media/vwarz.svg" id="obj11">
+		</div>
+
+		<div id="vwarz">
+			<b>V-Warz</b><br>
+			The carnival for the “Men with joysticks” having over 10K CASH PRIZES is all set to achieve unprecedented heights with games like COD4, CS:GO and FIFA.
+		</div>
+
+		<img src="media/star.svg" id="obj3">
+		<img src="media/star.svg" id="obj30">
+		<div id="dance">
+			<b>Natraaj</b><br>
+			An open platform for those who dance not just to the beats but to the hearts.
+		</div>
+
+		<img src="media/star.svg" id="obj2">
+		<img src="media/star.svg" id="obj20">
+		<div id="music">
+			<b>Voice of Incand</b><br>
+			The premier singing event of Incandescence. Watch as acclaimed vocalists as well as up and
+			coming singers challenge each other for the title to be called The Voice of Incand.
+		</div>
+
+		<img src="media/star.svg" id="obj4">
+		<img src="media/star.svg" id="obj40">
+		<div id="drama">
+			<b>Director's Cut</b><br>
+			Talented and passionate people around the country participate to prove that their short film is what its takes to become the best of them all. It involves a prelims followed by the finals where the best short films are screened during Incandescance.
+		</div>
+
+		<div id="obj50">
+			<img src="media/flag10.svg" id="obj5">
+			<div id="liter">
+				<b>NITS MUN</b><br>
+				Don your suits and ties, learn the workings of the UN and its committees the fun way and show the world that there’s
+				none better at making allies, outsmarting rivals and formulating solutions than you.<br>
+				<a href="./nitsmun" style="text-decoration: none; color: #5acaea; font-weight: bold;">Visit the NITSMUN Website</a><br><br>
+				<b>Deprador</b><br>
+				The grand Debating phenomenon of NIT Silchar is back with its 10 th edition. Get ready to
+				witness the “Battle of the Intellectuals”.<br><br>
+				<b>Frames</b><br>
+				The finest way to choose the best of all the photographers around the globe. This online photography competition starts 25 before Incandescence and results are declared on the concluding day of the fest.
+			</div>
+		</div>
+
+		<div id="team-page">
+			<img src="media/pad.png" id="pad">
+			<img src="media/bclose.svg" id="bclose">
+			<div id="cep">
+				<img src="media/cep.svg" style="max-width: 100%">
+			</div>			
+			<div id="svg0" class="svg"></div>
+			<div id="svg1" class="svg"></div>
+			<div id="svg2" class="svg"></div>
+			<div id="svg3" class="svg"></div>
+			<div id="svg4" class="svg"></div>
+			<div id="svg5" class="svg"></div>
+			<div id="svg6" class="svg"></div>
+			<div id="svg7" class="svg"></div>
+			<img src="media/pencil.png" id="pencil">
+			<img src="media/team/dev.png" class="team-image" id="dev">
+			<img src="media/team/bhawani.png" class="team-image" id="bhawani">
+			<img src="media/team/aniket.png" class="team-image" id="aniket">
+			<img src="media/team/ronit.png" class="team-image" id="ronit">
+			<img src="media/team/deepak.png" class="team-image" id="deepak">
+			<img src="media/team/naveen.png" class="team-image" id="naveen">
+			<img src="media/team/udit.png" class="team-image" id="udit">
+			<img src="media/team/sonal.png" class="team-image" id="sonal">
+			<img src="media/team/vishnu.png" class="team-image" id="vishnu">
+			<img src="media/team/khatri.png" class="team-image" id="khatri">
+			<img src="media/team/ankit.png" class="team-image" id="ankit">
+			<img src="media/team/prantik.png" class="team-image" id="prantik">
+			<img src="media/team/samim.png" class="team-image" id="samim">
+			<img src="media/team/mayukh.png" class="team-image" id="mayukh">
+			<img src="media/team/kunal.png" class="team-image" id="kunal">
+			<img src="media/team/satyam.png" class="team-image" id="satyam">
+			<img src="media/team/manish.png" class="team-image" id="manish">
+			<img src="media/team/satyamp.png" class="team-image" id="satyamp">
+			<img src="media/team/shrinjay.png" class="team-image" id="shrinjay">
+			<img src="media/team/rajat.png" class="team-image" id="rajat">
+			<img src="media/team/ahmed.png" class="team-image" id="ahmed">
+			<div id="team0"></div>
+			<div id="team1"></div>
+			<div id="team2"></div>
+			<div id="team3"></div>
+			<div id="team4"></div>
+			<div id="team5"></div>
+			<div id="team6"></div>
+			<div id="team7"></div>
+		</div>
+	</div>
+
+</body>
+
+<script type='text/javascript' src='js/jquery.min.js'></script>
+<script type='text/javascript' src='js/jquery.mousewheel.js'></script>
+<script type="text/javascript" src="js/vivus.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/team.js"></script>
+<script type="text/javascript" src="js/morph.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110072303-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110072303-1');
+</script>
+
 </html>
+
