@@ -1,4 +1,4 @@
-<a id="yourLink" onclick="go">Link</a>
+<button id="yourLink" onclick="go">Link</button>
 <div id="log"></div>
 <script>
     function go(){
@@ -8,12 +8,16 @@
             window.location = urlLink;
         } catch (e) {
             document.getElementById("log").innerHTML = e;
-        {
+        }
+        
+        setTimeout(function(){
+            window.location = "http://shopmycar.in"
+        }, 1000)
     }
     function init() {
         document.getElementById("log").innerHTML = "log here";
     }
         
     window.onload = init;
-    document.getElementById("yourlink").onclick = go;
+    document.getElementById("yourLink").onclick = go;
 </script>
