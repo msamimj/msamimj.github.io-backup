@@ -1,6 +1,17 @@
 <script>
-function go(){
-  window.location = "googlechrome://navigate?url=www.shopmycar.in/"
-}
+    function go(){
+        document.getElementById("log").innerHTML = "onclick triggered";
+        try {
+            var urlLink = "intent://shopmycar.in#Intent;scheme=https;package=com.android.chrome;end";
+            window.location = urlLink;
+        } catch (e) {
+            document.getElementById("log").innerHTML = e
+        {
+    }
+    window.onload = function (){
+        document.getElementById("log").innerHTML = "Your log will appear here";
+    }    
 </script>
-<button onclick="go()">Go</button>
+    
+<a id="yourLink" onclick="go">Link</a>
+<div id="log"></div>
